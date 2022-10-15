@@ -4,7 +4,7 @@
 
  A ML workflow for identifying spotted skunks from camera trap images taken on Santa Cruz Island in California's Channel Islands
 <p align="center">
-    <img src="santa_cruz_island.jpeg" alt="santa cruz island" width="500">
+    <img src="markdown_image/santa_cruz_island.jpeg" alt="santa cruz island" width="500">
 </p>
 
 ## Background
@@ -15,7 +15,7 @@ On the Channel Islands there are many species of animals, some that are endemic 
 As previously mentioned, since mid 2018 the National Park Service (NPS), Smithsonian Offie of Chief Information Officer (OCIO) Data Science Lab, and the UC, Santa Barbara Office Smithsonian Scholars have partnered together to analyze the spotted skunk poplution. On the Santa Rosa Island, we are using the Date/Time stamps on a number remote cameras which have been operating continuously from October 2018 to present to assess seasonal activity patterns of island spotted skunk and island fox. These cameras are motion activiated and are sensative to the motion of a motving branch, passing skunk or flying bird, ultamitly causing them to take thousands of pictures a day most of which are empty pictures. We however don't know which are empty and which are not so we must anylyze them one by taking up a lot of time and resources. For this reason we have decided to employ machine learning as to automate our workflow 
 
 <p align="center">
-    <img src="reconyx_hyperfire_camera.jpeg" alt="reconyx hyperfire camera" width="500">
+    <img src="markdown_image/reconyx_hyperfire_camera.jpeg" alt="reconyx hyperfire camera" width="500">
 </p>
 
 ### Data Mining Relavent Data
