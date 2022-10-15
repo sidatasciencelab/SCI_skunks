@@ -28,7 +28,7 @@ Labeled Information Library of Alexandria: Biology and Conservation (LILA BC)]([
 
 #### Renaming and Normalizing Data
 
-As mentioned, images from the LILA BC data set were annoted using the COCO dataset format and were normalized using best practices which can be found in the ```Renaming_moving.ipynb``` file as well as the ```class_moving.sh```. In addition to this, we collected camera trap data. given that we are processing images from from over X_NUM cameras we are therefor receiving thousands of images everytime we go into the field. For this reason we must be  able to keep track of the images site number, camera number, expedition number, and other metadata that we must include as part of our preprocessing procedure. To do this in an fast effecient manner we created a shell script that takes in n vairables and renames the images that collected based on user input. 
+As mentioned, images from the LILA BC data set were annoted using the COCO dataset format and were normalized using best practices which can be found in the ```Renaming_moving.ipynb``` file as well as the ```mass_move.sh```. In addition to this, we collected camera trap data. given that we are processing images from from over X_NUM cameras we are therefor receiving thousands of images everytime we go into the field. For this reason we must be  able to keep track of the images site number, camera number, expedition number, and other metadata that we must include as part of our preprocessing procedure. To do this in an fast effecient manner we created a shell script that takes in n vairables and renames the images that collected based on user input. 
 
 ```
 mass_rename.sh
