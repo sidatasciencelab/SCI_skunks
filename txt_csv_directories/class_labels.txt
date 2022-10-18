@@ -1,0 +1,4 @@
+Bird_partial
+Empty
+Fox
+Skunk
