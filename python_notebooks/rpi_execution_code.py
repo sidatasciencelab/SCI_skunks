@@ -6,6 +6,7 @@ import numpy as np
 import time
 import os
 
+
 def load_labels(path): # Read the labels from the text file as a Python list.
    with open(path, 'r') as f:
     return [line.strip() for i, line in enumerate(f.readlines())]
@@ -28,10 +29,20 @@ def classify_image(interpreter, image, top_k=1):
   ordered = np.argpartition(-output, 1)
   return [(i, output[i]) for i in ordered[:top_k]][0]
 
-data_folder = "/home/pi/Downloads/SCI_skunk-main/"
+print("Input model and labels parent directory: ")
+parent_directory = input()
 
-model_path = data_folder + "model-4.tflite"
-label_path = data_folder + "class_labels.txt"
+print("Input model name: ")
+model_name = input()
+
+print("Input class .txt file name: ")
+class_name = input()
+
+
+data_folder = parent_directory
+
+model_path = data_folder + model_name
+label_path = data_folder + class_name
 
 interpreter = Interpreter(model_path)
 #print("Model Loaded Successfully.")
@@ -42,13 +53,14 @@ print("Image Shape (", width, ",", height, ")")
 dict = {'Image Label':[],
         'Image Name':[],
         'Accuracy':[]}
-results = pd.DataFrame(dict)
-for images in os.listdir("/content/test_images/"):
+print("Directory path: ")
+directory = input()
+for images in os.listdir(directory):
  
     # check if the image ends with png
     if (images.endswith(".JPG") or images.endswith(".jpg")):
     # Load an image to be classified.
-        image = Image.open(data_folder + images).convert('RGB').resize((width, height))
+        image = Image.open(directory + images).convert('RGB').resize((width, height))
 
         # Classify the image.
         time1 = time.time()
@@ -64,8 +76,5 @@ for images in os.listdir("/content/test_images/"):
         classification_label = labels[label_id]
         #print("Image Label is :", classification_label, ", with Accuracy :", np.round(prob*100, 2), "%.")
         current_entry = {'Image Label': classification_label, "Image Name": images, 'Accuracy': (np.round(prob*100, 2), "%.")}
-
-        results = results.append(current_entry, ignore_index = True)
-        
-results.head()
+    print(current_entry)
 
