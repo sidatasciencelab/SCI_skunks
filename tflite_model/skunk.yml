@@ -1,0 +1,10 @@
+name: skunk
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - conda==22.9.0
+  - pip
+  - pandas
+  - pillow
+prefix: /home/alan214/miniforge3
