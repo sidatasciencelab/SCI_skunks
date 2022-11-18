@@ -1,3 +1,5 @@
+#sudo apt install exiftool
+
 echo "WARNING: double check varaibles before executing script"
 echo"
 ​############################################################################################################################################################################################################################
@@ -76,8 +78,8 @@ FOLLOW INSTRUCTIONS CLOSELY TO AVOID MSITAKES : )
 ############################################################################################################################################################################################################################
 ​"
 read -p 'Parent direcoty: ' read_location; #location of parent directory for images sd card location
+read -p 'mass_rename.sh file directory: ' mass_rename_direct; #location of parent directory for images sd card location
 
-i=0; for f in */*.jpg */*.JPG; do mv -- "$f" "parent_$((++i)).${f##*.}"; done  
 #we will change this to the correct amount wildcards depending on RPI home directory 
 #assuming that the SD card will mount in same location everytime without error.
 
@@ -85,6 +87,8 @@ i=0; for f in */*.jpg */*.JPG; do mv -- "$f" "parent_$((++i)).${f##*.}"; done
 
 #xport file_type
 export read_location
+export mass_rename_direct
+
 
 vars=()
 values=()
@@ -114,21 +118,22 @@ regex="${regex:${#separator}}"
 
 
 export regex;
-mkdir $regex
+#mkdir $regex
 
 #read -p 'Destination directory: ' destination;
-destination="${read_location}/${regex}/" #directory of where we want pictures to be coppied to
+#destination="${read_location}/${regex}/" #directory of where we want pictures to be coppied to
 read -r -p "Would you like to run this function in debug mode? [y/N] " response
 #echo "${destination}"
 export destination
 
+i=1
 
 case "$response" in
     [yY][eE][sS]|[yY]) 
             a=0
             while [ $a -lt 15 ]
             do
-                dir=(*.jpg)
+                dir=("${read_location}"/*/*.jpg)
                 img_num="${dir[a]##*_}"
                 printf '%q\n' "${destination}${regex}_${img_num}"
                 a=`expr $a + 1`
@@ -136,27 +141,40 @@ case "$response" in
         read -r -p "If this looks correct, enter [y/N] to run with previous entries  " yesorno
         case "$yesorno" in
             [yY][eE][sS]|[yY])  
-                find "${read_location}" -type f -iname '*.JPG' -exec sh -c '
-                img_num="${1##*_}";
-                mv "${1}" "${destination}${regex}_${img_num}"
-                ' sh_cp {} \;
+                for dir in "${read_location}"/*; do
+                        [ -d "${dir}" ] || continue
+                        for img in "${dir}"/*.jpg; do
+                                [ -e "${img}" ] || break
+                                new="$(printf ""${regex}"_img_%05d.jpg" "${i}")"
+                                mv "${img}" "$(dirname "${img}")/${new}"
+                                ((i++))
+                        done
+                done
                 ;;
             *)
                 echo "Try again an be sure to check your variables twice "
-                rmdir "${destination}"
-                ~/*/*/mass_rename.sh #change this to the where the local file will be stored on RPI 
+                #/home/pi/Downloads/SCI_skunks-main/Shell_scripts/mass_rename.sh #change this to the where the local file will be stored on RPI 
+                bash "${mass_rename_direct}"
                 ;;
             esac
         ;;
     *)
-        find "${read_location}" -type f -iname '*.JPG' -exec sh -c '
-        img_num="${1##*_}";
-        mv "${1}" "${destination}${regex}_${img_num}"
-        ' sh_cp {} \;
+        for dir in "${read_location}"/*; do
+                [ -d "${dir}" ] || continue
+                for img in "${dir}"/*.jpg; do
+                        [ -e "${img}" ] || break
+                        new="$(printf ""${regex}"_img_%05d.jpg" "${i}")"
+                        mv "${img}" "$(dirname "${img}")/${new}"
+                        ((i++))
+                done
+        done
         ;;
 esac
+#img_num="${dir[a]##*_}"
 
-exiftool -csv */*.jpg */*.JPG > "${regex}".csv 
+echo "Now we are creating csv and saving it to the sd card" 
+
+exiftool -csv "${destination}"*/*.jpg > "${destination}${regex}.csv" 
 #using same metadata to create csv name
 
 
