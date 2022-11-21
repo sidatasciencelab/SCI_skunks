@@ -1,0 +1,48 @@
+name: skunkEnv
+channels:
+  - anaconda
+  - conda-forge
+dependencies:
+  - _openmp_mutex=4.5=2_gnu
+  - ca-certificates=2022.07.19=hd43f75c_0
+  - ld_impl_linux-aarch64=2.39=ha75b1e8_0
+  - libblas=3.9.0=15_linuxaarch64_openblas
+  - libcblas=3.9.0=15_linuxaarch64_openblas
+  - libffi=3.4.2=h3557bc0_5
+  - libgcc-ng=12.2.0=h607ecd0_19
+  - libgfortran-ng=11.2.0=h6e398d7_1
+  - libgfortran5=11.2.0=h1234567_1
+  - libgomp=12.2.0=h607ecd0_19
+  - liblapack=3.9.0=15_linuxaarch64_openblas
+  - libnsl=2.0.0=hf897c2e_0
+  - libopenblas=0.3.20=hc2e42e2_1
+  - libsqlite=3.40.0=hf9034f9_0
+  - libstdcxx-ng=12.2.0=hc13a102_19
+  - libzlib=1.2.13=h4e544f5_4
+  - ncurses=6.3=headf329_1
+  - numpy=1.19.5=py36hdc1b780_1
+  - openssl=1.1.1q=h2f4d8fa_0
+  - pandas=1.1.5=py36ha63b481_0
+  - pip=21.3.1=pyhd8ed1ab_0
+  - python=3.6.15=h30375ac_0_cpython
+  - python-dateutil=2.8.2=pyhd3eb1b0_0
+  - python_abi=3.6=2_cp36m
+  - pytz=2021.3=pyhd3eb1b0_0
+  - readline=8.1.2=h38e3740_0
+  - setuptools=58.0.4=py36h704843e_2
+  - six=1.16.0=pyhd3eb1b0_1
+  - sqlite=3.40.0=h69ca7e5_0
+  - tk=8.6.12=hd8af866_0
+  - wheel=0.37.1=pyhd8ed1ab_0
+  - xz=5.2.6=h9cdd2b7_0
+  - pip:
+    - importlib-resources==5.4.0
+    - nibabel==3.2.2
+    - packaging==21.3
+    - pillow==8.4.0
+    - pyparsing==3.0.9
+    - scipy==1.5.4
+    - tflite-runtime==2.5.0.post1
+    - tqdm==4.64.1
+    - zipp==3.6.0
+prefix: /home/pi/miniforge3/envs/skunkEnv
