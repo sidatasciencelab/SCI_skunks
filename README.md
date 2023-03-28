@@ -17,10 +17,14 @@ As mentioned new tools and algorithms are required to build process and harness 
 
 The purpose of this README.md file is to help you understand the purpose of the project as well as understanding the content and purpose of each folder in this repository. 
 
-This document serves as a procedural guide for various processes, detailing explicitly how to navigate the current model and data collection system so future interns and users of this soft- ware can understand and navigate it with ease. This software and document is written for students and mentors of the UCSB-Smithsonian Scholars Program as well as the OCIO Data science Lab.
+This document also serves as a procedural guide for various processes, detailing explicitly how to navigate the current model and data collection system so future interns and users of this software can understand and navigate it with ease. This software and document is written for students and mentors of the UCSB-Smithsonian Scholars Program as well as the OCIO Data science Lab.
 
 
 ## Folders
+In this repository we see seven different folder, these folders all serve a different purpose and store different data files. This section will give you an end to end explanation of the type of files, data, and purpose file within the folders. 
+
+### Shell_Scripts
+
 ## Third Example
 ## [Fourth Example](http://www.fourthexample.com)
 
