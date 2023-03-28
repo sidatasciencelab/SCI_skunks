@@ -1,13 +1,10 @@
-1. Project's Title
-This is the name of the project. It describes the whole project in one sentence, and helps people understand what the main goal and aim of the project is.
-
 <p align="center">
     <strong>Santa Cruz Island Spotted Skunk Project</strong>
-</p>
+</p>e
 
 At the Smithsonian Office of Chief Information Officer (OCIO) Lab researchers use big data techniques, such as deep machine learning, to generate insights from their data, whether they are derived from genome sequencing, ecological sensors, or mass digitization of museum objects. These techniques require computational expertise in hardware and software to both build new algorithms and to implement the emerging tools on current and on-going project.
 
-As mentioned new tools and algorithms are required to build process and harness and the data that is being collected and in this repository you will find a project repository tailored specifically towards an ongoing project done by the OCIO Lab at the Calfornia Channel Islands. 
+As mentioned new tools and algorithms are required to build process and harness and the data that is being collected and in this repository you will find a project repository tailored specifically towards an ongoing project done by the OCIO Lab at the California Channel Islands. 
 
 # Table of Contents
 1. [Purpose](#Purpose)
@@ -17,6 +14,12 @@ As mentioned new tools and algorithms are required to build process and harness 
 
 
 ## Purpose
+
+The purpose of this README.md file is to help you understand the purpose of the project as well as understanding the content and purpose of each folder in this repository. 
+
+This document serves as a procedural guide for various processes, detailing explicitly how to navigate the current model and data collection system so future interns and users of this soft- ware can understand and navigate it with ease. This software and document is written for students and mentors of the UCSB-Smithsonian Scholars Program as well as the OCIO Data science Lab.
+
+
 ## Folders
 ## Third Example
 ## [Fourth Example](http://www.fourthexample.com)
