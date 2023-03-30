@@ -1,3 +1,8 @@
+---
+output:
+  html_document: default
+  pdf_document: default
+---
 <p align="center">
     <strong>Santa Cruz Island Spotted Skunk Project</strong>
 </p>
@@ -10,6 +15,8 @@ As mentioned new tools and algorithms are required to build process and harness 
 - [1. Purpose](#Purpose)
 - [2. Folders](#Folders)
   * [2.1 Shell_Scripts](#Shell_scripts)
+    * [2.1.1 train_move.sh](#train_move.sh)
+    * [2.1.2 mass_rename.sh](#mass_rename.sh)
   * [2.2 cameratrap-dp](#cameratrap-dp)
   * [2.3 markdown_images](#markdown_images)
   * [2.4 python_notebooks](#python_notebooks)
@@ -31,17 +38,21 @@ This document also serves as a procedural guide for various processes, detailing
 In this repository we see seven different folder, these folders all serve a different purpose and store different data files. This section will give you an end to end explanation of the type of files, data, and purpose file within the folders. 
 
 ### Shell_scripts
-Withing this folder you can find the following files:
-  * [train_move.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/trainMove.sh): The purpose of this file is to reorganize the files from a randomized format to a structure similar to the flowers data set (seen below). 
-  \begin{center}
-        \includegraphics[width=10cm]{markdown_image/beforeAfter.jpg}
-    \end{center}
-    
-    <p align="center">
+Within this folder you can find the following files:
+
+  * [train_move.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/trainMove.sh)
+  * [mass_rename.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_rename.sh)
+  
+
+#### train_move.sh
+
+The purpose of this file is to reorganize the files from a randomized data structure to a structure follwoing to the flowers data set (seen below). 
+   <p align="center">
     <img src="markdown_image/beforeAfter.jpg" alt="Reorganized  Data Structure" width="500">
     </p>
   
-  There are seven categories/folders that are going to be created from this script and will labeled as follows.:
+  There are seven categories/folders that are going to be created from this script and will labeled as follows:
+  
     1. Bird
     2. Empty
     3. Fox
@@ -50,13 +61,67 @@ Withing this folder you can find the following files:
     6. Rodent
     7. Skunk
     
-  The purpose of this file is to 
+  These files will then be refrenced by the [mass_rename.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_rename.sh) shell script so it is important to insure that names are correctly spelled and exactly as shown above.
+  
+#### mass_rename.sh
     
-### cameratrap-dp
+The purpose of this file is to rename the files with a unique name following a general schema. The renamed image will look similar to what is shown below and the purpose is to be able to more easily manage the data as well as store metadata within the name of the image to more easily understand where and when the image was taken.
+  
+  > **Sample Image Name:**  2022_02_2A_01_img_00001.jpg
+  
+  As you can see above we can easily tell that this picture takes on the follwing format!
+  
+  > **Sample Image Schema:**  Year_CameraLocation_CameraIdentificationNumber_TripNumber_img_00001.jpg
+    
+### cameratrap-dp: 
+
+The content of this folder is to store sample files produced by [deployMediaObs.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/deploymediaobs.py). If there is any confusiion understnading the files please reference the techincal document [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf), this file contains very in depth explanation of all the files found in this folder. 
 
 ### markdown_images
 
+The content of this folder is used to store images and other files referenced throughout the repository. None of these images/files in this folder are of significant importance with the exception of the README.md file. 
+
 ### python_notebooks
+
+Within this folder you can find the following files/python notebooks:
+
+  * [ML_model.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/ML_model.ipynb)
+  * [Renaming_moving.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/Renaming_moving.ipynb)
+  * [deployMediaObs.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/deploymediaobs.py)
+  * [jsonToCsv.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/jsonToCsv.ipynb)
+  * [jsonToCsv.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/jsonToCsv.ipynb)
+  * [rpiClassify.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/rpiClassify.py)
+
+#### ML_model.ipynb 
+
+This Python notebook contains the the source code to train our image classifying model. This model utilizes the Tensor Flow Lite Model Maker to train a model that is less GPU and storage intensive. The reason why we need to create such a model is becasue the Raspberry Pi's we are using are much smaller in terms of storage and and GPU capabilities. 
+
+The steps this note book take to train the model are as follows 
+  
+    1. Installing Tensor Flow Lite
+    2. Importing Required Libraries
+    3. Importing Google Drive files
+    4. Setting Image Path
+    5. File Cleaning and Preparation
+    6. Creating Train and Test Data From Images in image_path Directory
+    7. Creating Validation and Test data From rest_data
+    8. Tensor Flow Lite Model
+
+Althouhg we only see an overview of the steps the notebook performs we can, you can refrence the techincal document, [rpiClassify.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/Tensorflow_Lite_on_RPI_end_to_end-2.pdf) for an in depth explnation of the algorithm and steps used in this creation of the image classifying model. 
+
+#### Renaming_moving.ipynb
+
+This python notebook converts the the Annotation file affiliated with the dataset, found [here](https://lilablobssc.blob.core.windows.net/channel-islands-camera-traps/channel-islands-camera-traps.json.zip), from a Json data structure to a CSV data structure. 
+
+We need to convert the file from a Json to CSV in order to work with it using various other notebooks and shell scripts.
+
+#### deployMediaObs.py
+
+It is important to structure the data in a method that is of common practice and easy to understand for researchers who use our data. For that reason we created the [deployMediaObs.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/deploymediaobs.py) python executable file.
+
+This Python Executable contains the the source code to convert files produced by [ML_model.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/ML_model.ipynb) into the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/) format. As mention we must follow standard practice to share our findings and this python does that. 
+
+It is important to understand what the the files produced signify and how they functino together.. In order to understand the files, please reference the Technical Document, [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)
 
 ### tech_documents
 
