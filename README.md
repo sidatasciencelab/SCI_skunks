@@ -1,8 +1,3 @@
----
-output:
-  html_document: default
-  pdf_document: default
----
 <p align="center">
     <strong>Santa Cruz Island Spotted Skunk Project</strong>
 </p>
