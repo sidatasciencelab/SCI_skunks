@@ -32,7 +32,16 @@ In this repository we see seven different folder, these folders all serve a diff
 
 ### Shell_scripts
 Withing this folder you can find the following files:
-  * [mass_move.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_move.sh): This shell script references images that were sorted by category using the [trainMove.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/trainMove.sh) shell script. There are seven categories/folders used are:
+  * [train_move.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/trainMove.sh): The purpose of this file is to reorganize the files from a randomized format to a structure similar to the flowers data set (seen below). 
+  \begin{center}
+        \includegraphics[width=10cm]{markdown_image/beforeAfter.jpg}
+    \end{center}
+    
+    <p align="center">
+    <img src="markdown_image/beforeAfter.jpg" alt="Reorganized  Data Structure" width="500">
+    </p>
+  
+  There are seven categories/folders that are going to be created from this script and will labeled as follows.:
     1. Bird
     2. Empty
     3. Fox
@@ -40,6 +49,8 @@ Withing this folder you can find the following files:
     5. Other
     6. Rodent
     7. Skunk
+    
+  The purpose of this file is to 
     
 ### cameratrap-dp
 
