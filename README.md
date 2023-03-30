@@ -15,6 +15,12 @@ As mentioned new tools and algorithms are required to build process and harness 
   * [2.2 cameratrap-dp](#cameratrap-dp)
   * [2.3 markdown_images](#markdown_images)
   * [2.4 python_notebooks](#python_notebooks)
+    * [2.4.1](#ML_model.ipynb)
+    * [2.4.2](#Renaming_moving.ipynb)
+    * [2.4.3](#deployMediaObs.py)
+    * [2.4.4](#jsonToCsv.ipynb)
+    * [2.4.5](#jsonToCsv.py)
+    * [2.4.6](#rpiClassify.py)
   * [2.5 tech_documents](#tech_documents)
   * [2.6 tflite_model](#tflite_model)
   * [2.7 txt_csv_direcotries](#txt_csv_direcotries)
@@ -116,7 +122,7 @@ It is important to structure the data in a method that is of common practice and
 
 This Python Executable contains the the source code to convert files produced by [ML_model.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/ML_model.ipynb) into the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/) format. As mention we must follow standard practice to share our findings and this python does that. 
 
-It is important to understand what the the files produced signify and how they functino together.. In order to understand the files, please reference the Technical Document, [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)
+It is important to understand what the the files produced signify and how they functino together. In order to understand the files, please reference the Technical Document, [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)
 
 ### tech_documents
 
