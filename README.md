@@ -31,7 +31,16 @@ This document also serves as a procedural guide for various processes, detailing
 In this repository we see seven different folder, these folders all serve a different purpose and store different data files. This section will give you an end to end explanation of the type of files, data, and purpose file within the folders. 
 
 ### Shell_scripts
-
+Withing this folder you can find the following files:
+  * [mass_move.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_move.sh): This shell script references images that were sorted by category using the [trainMove.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/trainMove.sh) shell script. There are seven categories/folders used are:
+    1. Bird
+    2. Empty
+    3. Fox
+    4. Human
+    5. Other
+    6. Rodent
+    7. Skunk
+    
 ### cameratrap-dp
 
 ### markdown_images
