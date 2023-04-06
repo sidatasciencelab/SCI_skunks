@@ -18,6 +18,9 @@ As mentioned new tools and algorithms are required to build process and harness 
     * [2.4.1 ML_model.ipynb](#ML_model.ipynb)
     * [2.4.2 Renaming_moving.ipynb](#Renaming_moving.ipynb)
     * [2.4.3 deployMediaObs.py](#deployMediaObs.py)
+    * [2.4.4 jsonToCsv.ipynb](#jsonToCsv.ipynb)
+    * [2.4.5 jsonToCsv.py](#jsonToCsv.py)
+    * [2.4.6 rpiClassify.py](#rpiClassify.py)
   * [2.5 tech_documents](#tech_documents)
   * [2.6 tflite_model](#tflite_model)
   * [2.7 txt_csv_direcotries](#txt_csv_direcotries)
@@ -45,9 +48,9 @@ Within this folder you can find the following files:
 #### train_move.sh
 
 The purpose of this file is to reorganize the files from a randomized data structure to a structure follwoing to the flowers data set (seen below). 
-   <p align="center">
+  <p align="center">
     <img src="markdown_image/beforeAfter.jpg" alt="Reorganized  Data Structure" width="500">
-    </p>
+  </p>
   
   There are seven categories/folders that are going to be created from this script and will labeled as follows:
   
@@ -57,9 +60,9 @@ The purpose of this file is to reorganize the files from a randomized data struc
     4. Human
     5. Other
     6. Rodent
-    7. Skunk
+    7. Skunkd
     
-  These files will then be refrenced by the [mass_rename.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_rename.sh) shell script so it is important to insure that names are correctly spelled and exactly as shown above.
+These files will then be refrenced by the [mass_rename.sh](https://github.com/sidatasciencelab/SCI_skunks/blob/main/Shell_scripts/mass_rename.sh) shell script so it is important to insure that names are correctly spelled and exactly as shown above.
   
 #### mass_rename.sh
     
@@ -73,7 +76,7 @@ The purpose of this file is to rename the files with a unique name following a g
     
 ### cameratrap-dp: 
 
-The content of this folder is to store sample files produced by [deployMediaObs.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/deploymediaobs.py). If there is any confusiion understnading the files please reference the techincal document [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf), this file contains very in depth explanation of all the files found in this folder. 
+The content of this folder is to store sample files produced by [deployMediaObs.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/deploymediaobs.py). If there is any confusiion understnading the files please reference the techincal document [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf), this file contains very in depth explanation of all the files found in this folder.
 
 ### markdown_images
 
@@ -105,7 +108,7 @@ The steps this note book take to train the model are as follows
     7. Creating Validation and Test data From rest_data
     8. Tensor Flow Lite Model
 
-Althouhg we only see an overview of the steps the notebook performs we can, you can refrence the techincal document, [rpiClassify.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/Tensorflow_Lite_on_RPI_end_to_end-2.pdf) for an in depth explnation of the algorithm and steps used in this creation of the image classifying model. 
+Although we only see an overview of the steps the notebook performs we can, you can refrence the techincal document, [rpiClassify.py](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/Tensorflow_Lite_on_RPI_end_to_end-2.pdf) for an in depth explnation of the algorithm and steps used in this creation of the image classifying model. 
 
 #### Renaming_moving.ipynb
 
@@ -119,9 +122,23 @@ It is important to structure the data in a method that is of common practice and
 
 This Python Executable contains the the source code to convert files produced by [ML_model.ipynb](https://github.com/sidatasciencelab/SCI_skunks/blob/main/python_notebooks/ML_model.ipynb) into the [Camera Trap Data Package](https://tdwg.github.io/camtrap-dp/) format. As mention we must follow standard practice to share our findings and this python does that. 
 
-It is important to understand what the the files produced signify and how they functino together. In order to understand the files, please reference the Technical Document, [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)
+It is important to understand what the the files produced signify and how they functino together. In order to understand the files, please reference the Technical Document, [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)n for an in depth explanation of what each PDF files contains and where they will be stored within the RPI.
 
 ### tech_documents
+Throughout the construction of this project, we have put together a series of technical documents outlining the projects workflow and other aspects of the project. 
+
+Within this folder you find the following files:
+
+  * [CamTrapDP.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/CamTrapDP.pdf)
+  * [Tensorflow_Lite_on_RPI_end_to_end-2.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/Tensorflow_Lite_on_RPI_end_to_end-2.pdf)
+  * [Workflow___SCI_Skunks-2.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/Workflow___SCI_Skunks-2.pdf)
+  * [jsonToCsv-5.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/jsonToCsv-5.pdf)
+  * [mass_rename.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/mass_rename.pdf)
+  * [trainMove-3.pdf](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tech_documents/trainMove-3.pdf)
+  
+All of the files in this folder will be .pdf files and will be outlines and summaries of the Python notebooks, Shell Scripts, and all other execuatbale files that are found on within the [python_notebooks](https://github.com/sidatasciencelab/SCI_skunks/tree/main/python_notebooks), [Shell_scripts](https://github.com/sidatasciencelab/SCI_skunks/tree/main/Shell_scripts), and other folder containing exeecuatables. 
+
+It is highly reccomended that you read through these files as it will help you understand content in other folders.
 
 ### tflite_model
 
@@ -196,7 +213,7 @@ As mentioned, images from the LILA BC data set were annoted using the COCO datas
 shell_scripts/mass_rename.sh
 ```
 
-Once the rename naming was finsihed, I was left to reorganize the dataset into a format which [``` tflite_model_maker.image_classifier.DataLoader.from_folder() ```](https://www.tensorflow.org/lite/api_docs/python/tflite_model_maker/image_classifier/DataLoader) could read. I structured my data in a similiar way to to that of the [Flowers Data Set](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition). 
+Once the rename naming was finsihed, I was left to reorganize the dataset into a format which [```tflite_model_maker.image_classifier.DataLoader.from_folder()```](https://www.tensorflow.org/lite/api_docs/python/tflite_model_maker/image_classifier/DataLoader) could read. I structured my data in a similiar way to to that of the [Flowers Data Set](https://www.kaggle.com/datasets/alxmamaev/flowers-recognition). 
 ```
 └── Desktop
    └── Parents_directory 
