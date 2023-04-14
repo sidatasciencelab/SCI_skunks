@@ -174,36 +174,8 @@ esac
 
 echo "Now we are creating csv and saving it to the sd card" 
 
-exiftool -csv "${destination}"*/*.jpg > "${destination}${regex}.csv" 
+exiftool -csv */*.jpg > "metaData_${regex}.csv" 
 #using same metadata to create csv name
 
 
 
-
-
-printf '%q\n'
-"
-
-           *       ,MMM8&&&.            *
-                  MMMM88&&&&&    .
-                 MMMM88&&&&&&&
-     *           MMM88&&&&&&&&
-                 MMM88&&&&&&&&
-                 'MMM88&&&&&&'
-                   'MMM8&&&'      *    
-          |\___/|     /\___/|
-          )     (     )    ~( .               '
-         =\     /=   =\~    /=
-           )===(       ) ~ (
-          /     \     /     |
-          |     |     ) ~   (
-         /       \   /     ~ |
-         \       /   \~     ~/
-  _/\_/\_/\__  _/_/\_/\__~__/_/\_/\_/\_/\_/\_
-  |  |  |  |( (  |  |  | ))  |  |  |  |  |  |
-  |  |  |  | ) ) |  |  |//|  |  |  |  |  |  |
-  |  |  |  |(_(  |  |  (( |  |  |  |  |  |  |
-  |  |  |  |  |  |  |  |\)|  |  |  |  |  |  |
-  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |
-
-"
