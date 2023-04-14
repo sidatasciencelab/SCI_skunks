@@ -3,6 +3,9 @@
 
 #pip3 install --extra-index-url https://google-coral.github.io/py-repo tflite_runtime
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 from tflite_runtime.interpreter import Interpreter #sudo OPENBLAS_CORETYPE=ARMV8 python3 -m pip install tflite-runtime
 from PIL import Image
 import numpy as np
@@ -10,21 +13,15 @@ import time
 import os
 import pandas as pd #sudo OPENBLAS_CORETYPE=ARMV8 pip3 install pandas
 import datetime
-import warnings
 
-import glob
+import glob, os
 from shutil import copyfile
 
-warnings.simplefilter(action='ignore', category=FutureWarning)
-
-listing = glob.glob("/media/pi/*/DCIM1/envVars.csv") #using wild card to find the specific file names envVars.csv that is in the DCIM1 folder
-for filename in listing:
-  envVars = pd.read_csv(filename, sep = "=") #customo delimeter "=" rather than normal ',' 
 
 
-fileName = envVars.loc[envVars.Variables=="fileNamesMeta"].Values #extracting csv file name that will be convension for the rest of the files created 
-
-
+fileName = input("Please enter the name of the file procduced by mass_rename.sh, should look something like 'metaData_....csv'\n")
+#fileName = "year_camLoc_camID_tripNum.csv"
+fileName = fileName.split("_",1)[1]
 
 def load_labels(path): # Read the labels from the text file as a Python list.
    with open(path, 'r') as f:
@@ -107,7 +104,7 @@ for (dirpath, dirnames, filenames) in os.walk("/media/pi/C060-4E55/DCIM1"):
 
 
 
-          current_entry = {'observationType': classification_label, "imageName": fileName, 'classificationConfidence': (np.round(prob*100, 2), "%."), "classificationTimestamp" : timeOfClass}
+          current_entry = {'imageLabel': classification_label, "imageName": filename, 'accuracy': (np.round(prob*100, 2), "%."), "classificationTimeStamp" : timeOfClass}
 
           results = results.append(current_entry, ignore_index = True)
           
