@@ -24,8 +24,7 @@ As mentioned new tools and algorithms are required to build process and harness 
   * [2.5 tech_documents](#tech_documents)
   * [2.6 tflite_model](#tflite_model)
   * [2.7 txt_csv_direcotries](#txt_csv_direcotries)
-- [3. Third Example](#third-example)
-- [4. Fourth Example](#fourth-examplehttpwwwfourthexamplecom)
+
 
 
 ## Purpose
