@@ -23,6 +23,11 @@ As mentioned new tools and algorithms are required to build process and harness 
     * [2.4.6 rpiClassify.py](#rpiClassify.py)
   * [2.5 tech_documents](#tech_documents)
   * [2.6 tflite_model](#tflite_model)
+    * [2.6.1 class_labels.txt](#class_labels.txt)
+    * [2.6.2 model-4.tflite](#model-4.tflite)
+    * [2.6.3 model_prop_aug_train.tflite](#model_prop_aug_train.tflite)
+    * [2.6.4 model_proper_train.tflite](#model_proper_train.tflite)
+    * [2.6.5 skunkEnv.yml](#skunkEnv.yml)
   * [2.7 txt_csv_direcotries](#txt_csv_direcotries)
 
 
