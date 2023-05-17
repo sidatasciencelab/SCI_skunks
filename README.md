@@ -2,8 +2,7 @@
     <strong>Santa Cruz Island Spotted Skunk Project</strong>
 </p>
 
-![](https://github.com/sidatasciencelab/SCI_skunks/blob/main/markdown_image/Island-spotted-skunks-2.jpg){width = 50%}
-
+<img src="[image_url](https://github.com/sidatasciencelab/SCI_skunks/blob/main/markdown_image/Island-spotted-skunks-2.jpg)" alt="Alt Text" width="300" height="200">
 
 At the Smithsonian Office of Chief Information Officer (OCIO) Lab researchers use big data techniques, such as deep machine learning, to generate insights from their data, whether they are derived from genome sequencing, ecological sensors, or mass digitization of museum objects. These techniques require computational expertise in hardware and software to both build new algorithms and to implement the emerging tools on current and on-going project.
 
