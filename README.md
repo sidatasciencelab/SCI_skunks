@@ -147,7 +147,7 @@ Class_labels.txt is a txt file with labels the model will use. The reason this i
 
 #### model-4.tflite
 
-model-4.tflite is a tensorflow lite model which was trained with the following specifications:
+model-4.tflite is a tensorflow lite model which was trained with the following specifications on incomplete data:
 
 train_data = train_data,
 validation_data=validation_data,
@@ -160,7 +160,7 @@ use_augmentation= False
 
 #### model_prop_aug_train.tflite
 
-model_prop_aug_train.tflite is a tensorflow lite model which was trained with the following specifications:
+model_prop_aug_train.tflite is a tensorflow lite model which was trained with the following specifications using the LILA BC annotated dataset:
 
 train_data = train_data,
 validation_data=validation_data,
@@ -175,7 +175,7 @@ This is the model I decided use and implement in my research.
 
 #### model_proper_train.tflite
 
-model_proper_train.tflite is a tensorflow lite model which was trained with the following specifications:
+model_proper_train.tflite is a tensorflow lite model which was trained with the following specifications using the LILA BC annotated dataset:
 
 train_data = train_data,
 validation_data=validation_data,
@@ -185,5 +185,9 @@ learning_rate = 0.0001,
 batch_size = 4, 
 shuffle = True, 
 use_augmentation= True
+
+#### skunkEnv.yml
+
+skunkEnv.yml is .yml file containing all the requirements needed to replicate this project. It was created and intdedned to be used on Raspberry Pi 400 running miniforge3 but it may also work on other devices running simlair OS. 
 
 ### txt_csv_direcotries
