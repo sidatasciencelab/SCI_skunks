@@ -141,4 +141,57 @@ It is highly reccomended that you read through these files as it will help you u
 
 ### tflite_model
 
+Within this folder you will dind the following files:
+
+  * [class_labels.txt](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tflite_model/class_labels.txt)
+  * [model-4.tflite](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tflite_model/model-4.tflite)
+  * [model_prop_aug_train.tflite](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tflite_model/model_prop_aug_train.tflite)
+  * [model_proper_train.tflite](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tflite_model/model_proper_train.tflite)
+  * [skunkEnv.yml](https://github.com/sidatasciencelab/SCI_skunks/blob/main/tflite_model/skunkEnv.yml) 
+
+#### class_labels.txt
+
+Class_labels.txt is a txt file with labels the model will use. The reason this is needed is because we trained the model using [DataLoader.from_folder()](https://www.tensorflow.org/lite/api_docs/python/tflite_model_maker/image_classifier/DataLoader). 
+
+#### model-4.tflite
+
+model-4.tflite is a tensorflow lite model which was trained with the following specifications:
+
+train_data = train_data,
+validation_data=validation_data,
+model_spec=model_spec.get('efficientnet_lite3'), 
+epochs = 30, 
+learning_rate = 0.01,
+batch_size = 30, 
+shuffle = True, 
+use_augmentation= False
+
+#### model_prop_aug_train.tflite
+
+model_prop_aug_train.tflite is a tensorflow lite model which was trained with the following specifications:
+
+train_data = train_data,
+validation_data=validation_data,
+model_spec=model_spec.get('efficientnet_lite3'), 
+epochs = 85, 
+learning_rate = 0.001,
+batch_size = 20, 
+shuffle = True, 
+use_augmentation= True
+
+This is the model I decided use and implement in my research. 
+
+#### model_proper_train.tflite
+
+model_proper_train.tflite is a tensorflow lite model which was trained with the following specifications:
+
+train_data = train_data,
+validation_data=validation_data,
+model_spec=model_spec.get('efficientnet_lite3'), 
+epochs = 85, 
+learning_rate = 0.0001,
+batch_size = 4, 
+shuffle = True, 
+use_augmentation= True
+
 ### txt_csv_direcotries
