@@ -1,10 +1,12 @@
 #sudo apt install exiftool
 
+
 echo "WARNING: double check varaibles before executing script"
 echo"
 ​############################################################################################################################################################################################################################
 - This script renames every jpg file inside parent directory to include necessary metadata (camera name, zone, date, etc), and places them inside a single destination folder.
 - The parent directory must follow the following structure:
+
 
 ├── Parent Directory
 │   └── DCIM
@@ -15,6 +17,8 @@ echo"
 |                ├── img_2.jpg
 |                └── img_3.jpg                
 └── Destination_directory
+
+
 
 
 ​
@@ -37,11 +41,13 @@ Shell script description (what the code means):
 This function is a great function to use when cleaning and tidying data as you might have multiple files that share the same name (i.e. img_1 in 100RECNX and img_1 in 101RECNX). 
 If the user were to go around and collect the data from multiple sources the user could make them unique based based on the zone, cam_name, & trip_num. 
 
+
 - 
 - 
 - 
 - 
 - 
+
 
 {For Mac users}
 To use this program on any MAC/MACBOOK you can do the following:
@@ -56,6 +62,7 @@ To use this program on any MAC/MACBOOK you can do the following:
     4. There is no need to create a destination directory as it is created for you as part and renamed images are automatically sent there
     5. We advice running in debugging mode at least once so that you can check for typos or mistakes in your typing or destination path
 "
+
 
 echo"
 {For Raspberry Pi users}
@@ -80,18 +87,28 @@ FOLLOW INSTRUCTIONS CLOSELY TO AVOID MSITAKES : )
 read -p 'Parent direcoty: ' read_location; #location of parent directory for images sd card location
 read -p 'mass_rename.sh file directory: ' mass_rename_direct; #location of parent directory for images sd card location
 
+
 #we will change this to the correct amount wildcards depending on RPI home directory 
 #assuming that the SD card will mount in same location everytime without error.
 
-#read -p 'What file format will you be ranaming? If you want to rename all files enter "*": ' file_type
+
+
+
+
 
 #xport file_type
 export read_location
 export mass_rename_direct
 
 
+
+
 vars=()
 values=()
+
+
+read -p 'Enter the file extension of the format you want to rename. Note that input is case sensitive (e.g, jpg, JPG, png, PNG): ' file_extension
+
 
 read -p "How many variables do you want to include in your file name: " cvar
 loop=1
@@ -107,8 +124,10 @@ do
     loop=$((loop+1))
 done
 
+
 echo "${values[*]}"
 echo "${vars[*]}"
+
 
 separator="_" 
 foo=$values
@@ -117,8 +136,12 @@ regex="${regex:${#separator}}"
 
 
 
+
+
+
 export regex;
 #mkdir $regex
+
 
 #read -p 'Destination directory: ' destination;
 #destination="${read_location}/${regex}/" #directory of where we want pictures to be coppied to
@@ -126,14 +149,16 @@ read -r -p "Would you like to run this function in debug mode? [y/N] " response
 #echo "${destination}"
 export destination
 
+
 i=1
+
 
 case "$response" in
     [yY][eE][sS]|[yY]) 
             a=0
             while [ $a -lt 15 ]
             do
-                dir=("${read_location}"/*/*.jpg)
+                dir=("${read_location}"/*/*."${file_extension}")
                 img_num="${dir[a]##*_}"
                 printf '%q\n' "${destination}${regex}_${img_num}"
                 a=`expr $a + 1`
@@ -143,9 +168,9 @@ case "$response" in
             [yY][eE][sS]|[yY])  
                 for dir in "${read_location}"/*; do
                         [ -d "${dir}" ] || continue
-                        for img in "${dir}"/*.jpg; do
+                        for img in "${dir}"/*."${file_extension}"; do
                                 [ -e "${img}" ] || break
-                                new="$(printf ""${regex}"_img_%05d.jpg" "${i}")"
+                                new="$(printf "${regex}_img_%05d.${file_extension}" "${i}")"
                                 mv "${img}" "$(dirname "${img}")/${new}"
                                 ((i++))
                         done
@@ -163,7 +188,7 @@ case "$response" in
                 [ -d "${dir}" ] || continue
                 for img in "${dir}"/*.jpg; do
                         [ -e "${img}" ] || break
-                        new="$(printf ""${regex}"_img_%05d.jpg" "${i}")"
+                        new="$(printf "${regex}_img_%05d.${file_extension}" "${i}")"
                         mv "${img}" "$(dirname "${img}")/${new}"
                         ((i++))
                 done
@@ -172,10 +197,17 @@ case "$response" in
 esac
 #img_num="${dir[a]##*_}"
 
+
 echo "Now we are creating csv and saving it to the sd card" 
 
-exiftool -csv */*.jpg > "metaData_${regex}.csv" 
+
+exiftool -csv */*."${file_extension}" > "metaData_${regex}.csv" 
 #using same metadata to create csv name
+
+
+
+
+
 
 
 
