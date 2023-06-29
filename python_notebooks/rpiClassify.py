@@ -80,7 +80,7 @@ results = pd.DataFrame(dict)
 
 for (dirpath, dirnames, filenames) in os.walk("/media/pi/C060-4E55/DCIM1"):
     for filename in filenames:
-        if filename.endswith('.jpg'):  
+        if filename.endswith('.jpg') or filename.endswith('.JPG'):  
           images = (os.sep.join([dirpath, filename]))
           timeOfClass = datetime.datetime.now()
 
