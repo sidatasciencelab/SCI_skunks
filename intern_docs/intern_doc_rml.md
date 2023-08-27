@@ -353,6 +353,8 @@ ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$
 **Description:**
 After learning I didn't have the permissions to run conda on an SD card I tried to keep the conda installed at the root and change it so that new conda environments were stored on the SD card instead of the internal storage. This is another attempt to increase storage on the NVIDIA machine. I had miniforge-pypy3 installed at the root when I made these attempts. The conda version I had installed at the root when I made these attempts. In section 4 I will describe how and why I deleted miniforge-pypy3 and installed miniforge3 instead. 
 
+*All steps were reversed after this attempt so new conda environments aren't stored in the SD card by default anymore.* 
+
 ### 3.1 Temporarily changing the location 
 **Description:**
 The following steps describe how to temporarily make the SD card hold all new conda environments folders. Since it is temporary, this means it only applies to the current session. I demonstrate how to permanently change it in section 3.2 so that all future versions of conda installed on the NVIDIA machine have their environments stored on the SD card. These attempts were semi-successful. I was able to successfully create some environments as long as I did not specify a python version different from the version already in the environment. For example: 'conda create --name myenv' works and when you check the version of python it says python version 2.7. But if you run 'conda create --name myenv python=3.8' you run into an error. Additionally, I'm unable to install any other versions of python in this environment. Perhaps, this will work well for environments that solely require python version 2.7, but I run into issues when I try using other versions.  
@@ -720,5 +722,9 @@ Although I was unable to use the SD card for storage purposes involving conda (d
   ```
   conda deactivate
   ```
-  
+
+**Next Steps**
+
+Once the machine has more internal storage, the optional segment anything model dependencies can be installed. After this, masks can be generated and processed with ease!
+   
 
