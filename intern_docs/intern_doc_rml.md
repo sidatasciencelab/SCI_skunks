@@ -699,8 +699,7 @@ While I was hoping to find a way to use the SD card to mitigate the internal sto
   ```
 
 ##ERORR 
-At this point, I ran the command above with no issues until a error popped up and claimed I had no more storage. If the storage issue is resolved in the future the rest of the instructions should work. 
-
+*At this point, I ran the command above with no issues until an error popped up and claimed I had no storage left. If the storage issue is resolved in the future the remaining instructions should work.*
 5. Run Example Notebooks (Optional):
    If you installed the optional dependencies and want to run the example notebooks, navigate to the directory where you cloned or installed Segment Anything and start Jupyter Notebook:
 
