@@ -29,11 +29,11 @@ This document serves as comprehensive documentation for all the tasks and config
 
 **Description**
 
-The following details the actions I performed while navigating the system configuration. 
+The following text documents the actions I performed while navigating the system configuration. 
 
 **L4T_End_User_License_Agreement:**
 
-Select "I accept the terms of these licenses""
+Select "I accept the terms of these licenses"
 
 **Language:**
 
@@ -67,7 +67,7 @@ Select "Yes, send system info to Canonical""
 To ensure your NVIDIA machine functions properly, you'll need the following materials and accessories:
 
 1. **WiFi Adapter**
-Attach the WiFi Adapter to your NVIDIA Machine. It is called "TP-Link AC600 USB WiFi Adapter for PC". After you've attached it you should see a WiFi icon pop up in the upper right corner. Click it and look the WiFi youd like to connect to and type the password. 
+Attach the WiFi Adapter to your NVIDIA Machine. It is called "TP-Link AC600 USB WiFi Adapter for PC". After you've attached it you should see a WiFi icon in the upper right corner. Look for the WiFi you'd like to connect to and enter its password. 
 
 2. **Monitor**
 Use the HM Tech Display for Raspberry Pi. It should come with a stand and power cord. 
@@ -76,13 +76,13 @@ Use the HM Tech Display for Raspberry Pi. It should come with a stand and power 
 The monitor requires power to function. Connect the monitor to an outlet using the provided power cord with a USB-A port.
 
 4. **HDMI to HDMI Cord**
-To establish a video connection between your machine and the monitor, use an HDMI to HDMI cord. Connect one end to your machine and the other to the monitor's HDMI port.
+To establish a video connection between your machine and the monitor, use an HDMI to HDMI cord. Connect one end to your device and the other to the monitor's HDMI port.
 
 5. **Logitech Wireless Keyboard**
-Use a Logitech wireless keyboard. Connect the wireless USB A port to your machine to to pair it. 
+Use a Logitech wireless keyboard. Connect the wireless USB A port to your machine to pair it. 
 
 6. **Power Cord with USB-C Port**
-Connect your machine to a power source using the provided power cord with a USB-C port. Ensure the power cord is plugged in the correct port, there are two USB-C ports, one for data and one for power. 
+Connect your machine to a power source using the provided power cord with a USB-C port. Ensure the power cord is plugged into the correct port, there are two USB-C ports, one for data and one for power. 
 
 7. **SD Card and SD Card Reader with USB-A Port**
 An SD card and an SD card reader are useful for data storage and transfer. Insert the SD card into the reader and connect the reader to a USB-A port on your machine.
@@ -97,7 +97,7 @@ These materials are essential for setting up and using your NVIDIA machine!
 
 **Description:**
 
-I've observed that the USB-C port on my machine is not functioning as expected when it comes to reading SD cards. When I insert an SD card into the USB-C port, it's not being recognized by the system. This issue has been consistent across multiple SD cards that I've tested.
+I've observed that the USB-C port on my machine is not functioning as expected when it comes to reading SD cards. When I insert an SD card into the USB-C port; I notice it's not recognized by the system. This issue has been consistent across multiple SD cards I've tested.
 
 **Potential Causes:**
 
@@ -111,7 +111,7 @@ I've observed that the USB-C port on my machine is not functioning as expected w
 
 2. I've mounted and unmounted it several times through the command line and physically
 
-3. I've used command "lsblk" and  "fdisk -l" to see if it is detected. It was not detected. 
+3. I've used commands 'lsblk' and  'fdisk -l' to see if it is detected. It was not detected. 
 
 **Next Steps:**
 
@@ -122,13 +122,13 @@ I've observed that the USB-C port on my machine is not functioning as expected w
 ## 2. Attempts to Install Conda Through Miniforge and Mambaforge on an SD Card <a name="conda-installation"></a>
 
 **Description:**
-When I received the NVIDIA machine there was barely any internal storage left. Only around 700mb of storage. This meant I was unable to create a conda environment for the segment anything model I was hoping to test out. In order to solve this issue I first tried to make use of the SD card which provided me with external storage. Unfortunately, I tried to install conda on the SD card and was not able to do so due to denied permissions and many other limitations involving the SD card. I've documented my steps below. 
+When I received the NVIDIA machine there was only around 700 MB of storage left. This meant I was unable to create a conda environment for the segment anything model, a model I was planning to use. First, I tried using an SD card for external storage to solve this issue. I attempted to install conda on the SD card, but unfortunately, I encountered denied permissions and several other limitations with the SD card. I've documented my steps below. 
  
 ### 2.1 Attempt 1 
 **Description:**
 I tried to install multiple versions of mambaforge and miniforge from this [website](https://github.com/conda-forge/miniforge) These attempts were unsuccessful. 
 
-0. Plug in SD card
+0. Plug in the SD card
 
 1. Download Mambaforge for ARM: [here](https://github.com/conda-forge/miniforge)
 
@@ -136,7 +136,7 @@ Download installer "Mambaforge-23.3.1-0-Linux-aarch64.sh".
 
 2. Transfer Mambaforge Installer to SD Card:
 
-Transfer the downloaded Mambaforge installer to the SD card using the `mv` command. The SD card is mounted at    the path "/media/ucsboep/NVIDIASD". Make sure you're in the directory of the downloaded installer. If you        downloaded it from the website it should have been put in /home/ucsboep/Downloads. 
+Transfer the downloaded Mambaforge installer to the SD card using the `mv` command. The SD card is mounted at the path "/media/ucsboep/NVIDIASD". Make sure you're in the directory of the downloaded installer. If you downloaded it from the website it should have been put in /home/ucsboep/Downloads. 
    
   ```
   cd /home/ucsboep/Downloads
@@ -174,13 +174,13 @@ Navigate to the "mambaforge" folder on the SD card:
   ```
   ./Mambaforge-23.3.1-0-Linux-aarch64.sh
   ```
-##ERROR
+## ERROR
 
 Permission Denied 
 
 ### 2.2 Attempt 2
 **Description:**
-For this attempt I completed all previous steps in attempt 1, the only change I made was in step 8. I used the sudo command to get permission.
+My steps in this attempt are identical to attempt 1 up until step 8. For this attempt, I used the sudo command to get permission.
 
 **Remove all previous installers and folders created using:**
   ```
@@ -196,7 +196,7 @@ Download installer "Mambaforge-23.3.1-0-Linux-aarch64.sh".
 
 2. Transfer Mambaforge Installer to SD Card:
 
-Transfer the downloaded Mambaforge installer to the SD card using the `mv` command. The SD card is mounted at    the path "/media/ucsboep/NVIDIASD". Make sure you're in the directory of the downloaded installer. If you        downloaded it from the website it should have been put in /home/ucsboep/Downloads. 
+Transfer the downloaded Mambaforge installer to the SD card using the `mv` command. The SD card is mounted at the path "/media/ucsboep/NVIDIASD". Make sure you're in the directory of the downloaded installer. If you downloaded it from the website it should have been put in /home/ucsboep/Downloads. 
    
   ```
   cd /home/ucsboep/Downloads
@@ -238,12 +238,12 @@ Navigate to the "mambaforge" folder on the SD card:
 
 9. Accept license terms:
 
-Here is a snippet of the terminal at this step:
+*Here is a snippet of the terminal at this step:*
 
 Do you accept the license terms? [yes|no]
 [no] >>> yes
 
-Mambaforge will now be installed into this location:
+Mambaforge will now be installed in this location:
 /home/ucsboep/mambaforge
 
   - Press ENTER to confirm the location
@@ -252,7 +252,7 @@ Mambaforge will now be installed into this location:
 
 [/home/ucsboep/mambaforge] >>> 
 
-**I chose to specify a different location. Here is what I typed:**
+*I chose to specify a different location. Here is what I typed:*
 
 [/home/ucsboep/mambaforge] >>> `/media/ucsboep/NVIDIASD/mambaforge`
 
@@ -265,7 +265,7 @@ ERROR: File or directory already exists: '/media/ucsboep/NVIDIASD/mambaforge'
 If you want to update an existing installation, use the -u option.
 ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$ 
 
-**To try to solve this issue I decided to create a new file in this step instead of making the directory at the beginning. I redid these steps.**
+*I decided to create a new file in this step instead of making the directory at the beginning to try to solve this issue.*
 
 1. Make Mambaforge Installer Executable:
 
@@ -279,12 +279,12 @@ ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$
   sudo  ./Mambaforge-23.3.1-0-Linux-aarch64.sh
   ```
 
-3. Follow prompts and press enter to continue:
+3. Follow the prompts and press enter to continue:
 
 
 4. Accept license terms:
 
-Here is a snippet of the terminal at this step:
+*Here is a snippet of the terminal at this step:*
 
 Do you accept the license terms? [yes|no]
 [no] >>> yes
@@ -303,22 +303,22 @@ Extracting ca-certificates-2023.7.22-hcefe29a_0.conda
 critical libmamba Can't create 'ssl/cert.pem'
 ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$ 
 
-**According to my research the reason this didn't work was because I had to use SUDO to bypass permission denied. The use of sudo automatically only gave me permission in the root folder. Hence why it kept trying to place mambaforge in /home/ucsboep/mambaforge. I believe this is why it didn't allow me to install conda onto the SD card.**
+*According to my research the reason this didn't work was because I had to use sudo to bypass permission denied. The use of sudo automatically only gave me permission in the root folder. This explains why it kept trying to place mambaforge in /home/ucsboep/mambaforge. I believe this is why it didn't allow me to install conda onto the SD card.*
 
-**I thought this may be because I don't have read and write permissions on the SD card.**
+*I thought this may be because I don't have read-and-write permissions on the SD card.*
 
 
 ### 2.3 Attempt 3
 **Description:**
-This time I focused on seeing if I could bypass permission denied without the use of SUDO since sudo seemed to be the reason I was not able to install conda onto the SD card. 
+This time I focused on seeing if I could bypass permission denied without the use of sudo. It seemed that sudo was the reason I was unable to install conda onto the SD card. 
 
-1. First I checked filesystem for read and write permissions on the SD card:
+1. First I checked the filesystem for read and write permissions on the SD card:
 
   ```
   mount
   ls -ld /media/ucsboep/NVIDIASD
   ```
-This snippet from the terminal showed I have read and write permissions so that is not the issue:
+*This snippet from the terminal showed I have read and write permissions on the sd card, therefore this was not the issue:*
 
 /dev/sda1 on /media/ucsboep/NVIDIASD type vfat (rw,nosuid,nodev,relatime,uid=1000,gid=1000,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,showexec,utf8,flush,errors=remount-ro,uhelper=udisks2)
 
@@ -328,11 +328,13 @@ This snippet from the terminal showed I have read and write permissions so that 
   sudo umount /media/ucsboep/NVIDIASD
   sudo mount /dev/sda1 /media/ucsboep/NVIDIASD
   ```
-3. I ran all steps in attempt 1 and got permission denied like before. 
+3. I ran all the steps in attempt 1 and got permission denied again. 
 
 4. Other attempts: 
 
-I used the - u options suggested in the error for attempt 2. Unfortunately I still received an error. Here is a snippet from my terminal 
+I used the - u options suggested in the error for attempt 2. Unfortunately, I still received an error. 
+
+*Here is a snippet from my terminal*
 
 ## ERROR 
 
@@ -343,19 +345,17 @@ ERROR: File or directory already exists: '/media/ucsboep/NVIDIASD/mambaforge'
 If you want to update an existing installation, use the -u option.
 ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$ 
 
-I also tried installing different versions of mambaforge and miniforge 
-
-This included miniforge3 and mambaforge. Miniforge denied permission despite using sudo and mambaforge gave me permission using sudo but this meant it couldnt be installed onto the sd card. 
+*I also tried installing miniforge3 and mambaforge but ran into the same issue*
 
 
 ## 3. How to Make New Conda Environments be Stored on the SD card by Default <a name="change-sd-default-location"></a>
 
 **Description:**
-Since I didn't have the permissions to run conda on an SD card I thought maybe I could keep the conda installed at the root and simply change it so that new conda environments are stored on the SD card instead of the internal storage. This is once again my attempt to resolve the storage issue involved with this NVIDIA machine. The conda version initially installed at the root when I made these attempts was miniforge-pypy3 for linux. Later, I will describe how and why I deleted this version and instead installed miniforge3. 
+After learning I didn't have the permissions to run conda on an SD card I tried to keep the conda installed at the root and change it so that new conda environments were stored on the SD card instead of the internal storage. This is another attempt to increase storage on the NVIDIA machine. I had miniforge-pypy3 installed at the root when I made these attempts. The conda version I had installed at the root when I made these attempts. In section 4 I will describe how and why I deleted miniforge-pypy3 and installed miniforge3 instead. 
 
 ### 3.1 Temporarily changing the location 
 **Description:**
-The following steps describe how to temporarily have all new conda environments created to be stored on the SD card attached. Since it is temporary this means it only applied to the current session. After this, I demonstrate how to permanently change it in section 3.2 so that all future versions of conda installed on the NVIDIA machine have their environments stored in the SD card. These attempts were semi-successful. I was able to successfully create some environments as long as I did not specify a python version different from version already in the environment. For example: 'conda create --name myenv' works and when you check the version of python it says python version 2.7. But if you run 'conda create --name myenv python=3.8' you run into an error. Additionally, I am not able to install any other versions of python in this environment. Perhaps, this will work well for any environments that solely use python version 2.7, but we run into issues when we try using others.  
+The following steps describe how to temporarily make the SD card hold all new conda environments folders. Since it is temporary, this means it only applies to the current session. I demonstrate how to permanently change it in section 3.2 so that all future versions of conda installed on the NVIDIA machine have their environments stored on the SD card. These attempts were semi-successful. I was able to successfully create some environments as long as I did not specify a python version different from the version already in the environment. For example: 'conda create --name myenv' works and when you check the version of python it says python version 2.7. But if you run 'conda create --name myenv python=3.8' you run into an error. Additionally, I'm unable to install any other versions of python in this environment. Perhaps, this will work well for environments that solely require python version 2.7, but I run into issues when I try using other versions.  
 
 0. Plug in SD card 
 
@@ -404,11 +404,12 @@ By following these steps, you've successfully configured Conda to create and man
 
 ### 3.2 Permanently changing the location 
 **Description:**
-The following steps describe how to permanently have all new conda environments created to be stored on the SD card attached. Since it is permanent, this means all future versions of conda installed on the NVIDIA machine have their environments stored in the SD card. These attempts were semi-successful. I was able to successfully create some environments as long as I did not specify a python version different from version already in the environment. For example: 'conda create --name myenv' works and when you check the version of python it says python version 2.7. But if you run 'conda create --name myenv python=3.8' you run into an error. Additionally, I am not able to install any other versions of python in this environment. Perhaps, this will work well for any environments that solely use python version 2.7, but we run into issues when we try using others.  
+The following steps describe how to permanently make the SD card hold all new conda environment folders. Since it is permanent, this means all future versions of conda installed on the NVIDIA machine have their environments stored in the SD card. These attempts were semi-successful. I was able to successfully create some environments as long as I did not specify a python version different from the version already in the environment. For example: 'conda create --name myenv' works and when you check the version of python it says python version 2.7. But if you run 'conda create --name myenv python=3.8' you run into an error. Additionally, I'm unable to install any other versions of python in this environment. Perhaps, this will work well for environments that solely require python version 2.7, but I run into issues when I try using other versions.  
+ 
 
-0. Plug in SD card 
+0. Plug in the SD card 
 
-1. Check Mount Point of SD Card
+1. Check Mount Point of the SD Card
    Verify that your SD card is properly mounted and accessible. You can use the `df -h` command to list the available filesystems and their mount points.
 
 
@@ -460,9 +461,9 @@ By following these steps, you successfully changed the default location for Cond
 
 ### 3.3 Creating a conda environment in the envs folder on the SD card without specifying the python version
 **Description:**
-The following steps describe how to create new conda environments in the SD card. However, as mentioned in the section 3.1 and 3.2 description, this seems to only work when you create an environment without specifying the python version you'd like to put in this environment. By default, the version installed is python 2.7. 
+The following steps describe how to create new conda environments in the SD card. However, as mentioned in sections 3.1 and 3.2. This only works when you create an environment without specifying a python version different from python 2.7. By default, the version installed with this conda version is python 2.7. 
 
-1.Make sure you are in the correct directory where Miniforge is installed. 
+1. Make sure you are in the correct directory where Miniforge is installed. 
 
   '''
   cd /home/ucsboep/miniforge-pypy3
@@ -481,21 +482,21 @@ The following steps describe how to create new conda environments in the SD card
   conda create --name myenv
   '''
 
-4 .To activate this environment use:
+4. To activate this environment use:
   '''
   conda activate myenv 
   '''
     
-5.To deactivate an active environment use:
+5. To deactivate an active environment use:
   '''
   conda deactivate my env 
   '''
   
 ### 3.4 Creating a conda environment in the envs folder on the SD card with specifying the python version
 **Description:**
-The following steps describe how to create new conda environments in the SD card. However, as mentioned in the section 3.1 and 3.2 description, this seems to only work when you create an environment without specifying the python version you'd like to put in this environment. When I tried to specify python version 3.8 I ran into an error.
+The following steps describe how to create new conda environments in the SD card. However, as mentioned in the section 3.1 and 3.2 descriptions, this only works when you create an environment without specifying the python version that is different from python 2.7. When I tried installing python version 3.8 I ran into an error.
 
-1.Make sure you are in the correct directory where Miniforge is installed. 
+1. Make sure you are in the correct directory where Miniforge is installed. 
 
   '''
   cd /home/ucsboep/miniforge-pypy3
@@ -516,9 +517,9 @@ The following steps describe how to create new conda environments in the SD card
 
 4. Proceed with instructions. 
 
-##ERROR 
+## ERROR 
 
-**Here is a snippet of the terminal error**
+*Here is a snippet of the terminal error*
 
 Downloading and Extracting Packages
 
@@ -535,7 +536,7 @@ Rolling back transaction: done
 
 **Next Steps**
 
-I think this once again has to do with permissions being restricted on the SD card. And this seems to be a recurring issue. I'm afraid I'll continue to run into these issues whenever I try to install dependencies here. I will instead focus on removing unnecessary folders (or moving them to an SD card) on the NVIDIA machine and having conda environments stored in the internal storage instead.
+Once again, I think this has to do with restricted permissions on the SD card. This seems to be a recurring issue. I'm afraid I'll continue to run into these issues whenever I try to install dependencies here. I will instead focus on removing unnecessary folders (or moving them to an SD card) on the NVIDIA machine and having conda environments stored in the internal storage instead.
  
 
 
@@ -543,7 +544,7 @@ I think this once again has to do with permissions being restricted on the SD ca
 
 
 **Description:**
-I learned miniforge-pypy3 is not as compatible with other dependencies as miniforge3. Therefore I deleted miniforge-pypy3 and replaces it with miniforge3. Miniforge-pypy3 was initially installed on the machine. Here's a summarized set of steps to uninstall miniforge from the Nvidia machine according documentation on github for miniforge. By doing this we can ensure we have a fresh start when installing a different conda version in our root:
+Miniforge-pypy3 was initially installed on the machine, but I learned that miniforge-pypy3 is not as compatible with other dependencies as miniforge3. Therefore, I deleted miniforge-pypy3 and replaced it with miniforge3. Here's are the steps I took to uninstall miniforge from the Nvidia machine. I used miniforge documentation on github to create these steps. By doing this we can ensure we have a fresh start when installing a different conda version in our root:
 
 ### 4.1 Remove Shell Modifications
 
@@ -652,7 +653,7 @@ By following these steps, you should be able to completely uninstall Miniforge f
 
 
 **Description:**
-While I was hoping to find a way to use the SD card to mitigate the internal storage issue so I could create a conda environment for segment anything and run in on my NVIDIA machine it seems that this wont be possible. I cannot install conda on it or modify it successfully so conda environments take up space on the SD card. Therefore I decided to simply create a conda environment for segment anything in the conda version (miniforge3) installed in the root of my machine. Initially, I did not have enough room to do this so I moved some uncessary files to the SD card. After this I was able to install most of segment anything on my machine except for the optional dependencies. In part 6 I will speak about how I moved unecessary files to the SD card so I could have enough room to install most of segment anything. 
+Although I was unable to use the SD card for storage purposes involving conda (described in sections 2 and 3), I moved some necessary files to the SD card (SCI_skunks-main and SCI_skunks-main-zip) and ended up having enough storage to create a conda environment for segment anything, and install required dependencies. I did not have enough storage, however, to install optional dependencies for mask post-processing, saving masks in COCO format, example notebooks, and exporting the model in ONNX format.
 
 
 ### 5.1 Creating an Environment for Segment Anything and Installing it 
@@ -698,8 +699,9 @@ While I was hoping to find a way to use the SD card to mitigate the internal sto
   pip install opencv-python pycocotools matplotlib onnxruntime onnx jupyter
   ```
 
-##ERORR 
+## ERROR
 *At this point, I ran the command above with no issues until an error popped up and claimed I had no storage left. If the storage issue is resolved in the future the remaining instructions should work.*
+
 5. Run Example Notebooks (Optional):
    If you installed the optional dependencies and want to run the example notebooks, navigate to the directory where you cloned or installed Segment Anything and start Jupyter Notebook:
 
