@@ -498,22 +498,22 @@ The following steps describe how to create new conda environments in the SD card
 
 1. Make sure you are in the correct directory where Miniforge is installed. 
 
-  '''
+  ```
   cd /home/ucsboep/miniforge-pypy3
-  '''
+  ```
     
 2. Activate Miniforge: Activating the base environment:
 
-  '''
+  ```
   source bin/activate
-  '''
+  ```
   If this command succeeds, you should see `(base)` at the beginning of your terminal prompt.
  
 3. Create a new conda environment 
 
-  '''
+  ```
   conda create --name segmentanything python=3.8
-  '''
+  ```
 
 4. Proceed with instructions. 
 
