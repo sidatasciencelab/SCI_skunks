@@ -67,16 +67,16 @@ Select "Yes, send system info to Canonical""
 To ensure your NVIDIA machine functions properly, you'll need the following materials and accessories:
 
 1. **WiFi Adapter**
-Attach the WiFi Adapter to your NVIDIA Machine. It is called "TP-Link AC600 USB WiFi Adapter for PC". After you've attached it you should see a WiFi icon in the upper right corner. Look for the WiFi you'd like to connect to and enter its password. 
+Attach the WiFi Adapter to your NVIDIA Machine. It is called "TP-Link AC600 USB WiFi Adapter for PC". After you've attached it you should see a WiFi icon in the upper right corner. Please be sure to look for the WiFi you'd like to connect to and enter its password. 
 
 2. **Monitor**
 Use the HM Tech Display for Raspberry Pi. It should come with a stand and power cord. 
 
 3. **Power Cord for the Monitor with USB-A Port**
-The monitor requires power to function. Connect the monitor to an outlet using the provided power cord with a USB-A port.
+The monitor requires power to function. You can connect the monitor to an outlet using the provided power cord with a USB-A port.
 
 4. **HDMI to HDMI Cord**
-To establish a video connection between your machine and the monitor, use an HDMI to HDMI cord. Connect one end to your device and the other to the monitor's HDMI port.
+To establish a video connection between your machine and the monitor, use an HDMI to HDMI cord. Connect one end to your device and the other end to the monitor's HDMI port.
 
 5. **Logitech Wireless Keyboard**
 Use a Logitech wireless keyboard. Connect the wireless USB A port to your machine to pair it. 
@@ -303,7 +303,7 @@ Extracting ca-certificates-2023.7.22-hcefe29a_0.conda
 critical libmamba Can't create 'ssl/cert.pem'
 ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$ 
 
-*According to my research the reason this didn't work was because I had to use sudo to bypass permission denied. The use of sudo automatically only gave me permission in the root folder. This explains why it kept trying to place mambaforge in /home/ucsboep/mambaforge. I believe this is why it didn't allow me to install conda onto the SD card.*
+*According to my research, the reason this didn't work was because I had to use sudo to bypass permission denied. The use of sudo automatically only gave me permission in the root folder. This explains why it kept trying to place mambaforge in /home/ucsboep/mambaforge. I believe this is why it didn't allow me to install conda onto the SD card.*
 
 *I thought this may be because I don't have read-and-write permissions on the SD card.*
 
@@ -351,7 +351,7 @@ ucsboep@ucsboep-desktop:/media/ucsboep/NVIDIASD/mambaforge$
 ## 3. How to Make New Conda Environments be Stored on the SD card by Default <a name="change-sd-default-location"></a>
 
 **Description:**
-After learning I didn't have the permissions to run conda on an SD card I tried to keep the conda installed at the root and change it so that new conda environments were stored on the SD card instead of the internal storage. This is another attempt to increase storage on the NVIDIA machine. I had miniforge-pypy3 installed at the root when I made these attempts. The conda version I had installed at the root when I made these attempts. In section 4 I will describe how and why I deleted miniforge-pypy3 and installed miniforge3 instead. 
+After learning I didn't have the permissions to run conda on an SD card, I tried to keep the conda installed at the root and change it so that new conda environments were stored on the SD card instead of the internal storage. This is another attempt to increase storage on the NVIDIA machine. I had miniforge-pypy3 installed at the root when I made these attempts. The conda version I had installed at the root when I made these attempts. In section 4 I will describe how and why I deleted miniforge-pypy3 and installed miniforge3 instead. 
 
 *All steps were reversed after this attempt so new conda environments aren't stored in the SD card by default anymore.* 
 
@@ -366,12 +366,10 @@ The following steps describe how to temporarily make the SD card hold all new co
 
 2. Set `CONDA_ENVS_PATH` Environment Variable
    Make sure you're in the home directory first by using  cd ~. Then set the `CONDA_ENVS_PATH` environment variable to the path on your SD card where you want to create new Conda environments. Replace `/media/ucsboep/NVIDIASD` with the actual path to your SD card. Here NVIDIASD is the name of the SD card and envs is the name of a folder in the NVIDIASD SD card where I am storing all new environments. This command creates the folder 'envs', but feel free to change it to any other folder name. 
-
   ```
-  cd ~ 
+  cd ~
   export CONDA_ENVS_PATH=/media/ucsboep/NVIDIASD/envs
-  ```
-
+  ```  
 3. Activate Miniforge Environment
    Activate the Miniforge environment by navigating to the directory where Miniforge is installed and sourcing the activation script.
 
