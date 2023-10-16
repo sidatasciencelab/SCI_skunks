@@ -63,3 +63,17 @@ url = {http://github.com/ecologize/CameraTraps}
   year={2023},
   publisher={Wiley Online Library}
 }
+
+@Article{computers11010013,
+AUTHOR = {Zualkernan, Imran and Dhou, Salam and Judas, Jacky and Sajun, Ali Reza and Gomez, Brylle Ryan and Hussain, Lana Alhaj},
+TITLE = {An IoT System Using Deep Learning to Classify Camera Trap Images on the Edge},
+JOURNAL = {Computers},
+VOLUME = {11},
+YEAR = {2022},
+NUMBER = {1},
+ARTICLE-NUMBER = {13},
+URL = {https://www.mdpi.com/2073-431X/11/1/13},
+ISSN = {2073-431X},
+ABSTRACT = {Camera traps deployed in remote locations provide an effective method for ecologists to monitor and study wildlife in a non-invasive way. However, current camera traps suffer from two problems. First, the images are manually classified and counted, which is expensive. Second, due to manual coding, the results are often stale by the time they get to the ecologists. Using the Internet of Things (IoT) combined with deep learning represents a good solution for both these problems, as the images can be classified automatically, and the results immediately made available to ecologists. This paper proposes an IoT architecture that uses deep learning on edge devices to convey animal classification results to a mobile app using the LoRaWAN low-power, wide-area network. The primary goal of the proposed approach is to reduce the cost of the wildlife monitoring process for ecologists, and to provide real-time animal sightings data from the camera traps in the field. Camera trap image data consisting of 66,400 images were used to train the InceptionV3, MobileNetV2, ResNet18, EfficientNetB1, DenseNet121, and Xception neural network models. While performance of the trained models was statistically different (Kruskal&ndash;Wallis: Accuracy H(5) = 22.34, p &lt; 0.05; F1-score H(5) = 13.82, p = 0.0168), there was only a 3% difference in the F1-score between the worst (MobileNet V2) and the best model (Xception). Moreover, the models made similar errors (Adjusted Rand Index (ARI) &gt; 0.88 and Adjusted Mutual Information (AMU) &gt; 0.82). Subsequently, the best model, Xception (Accuracy = 96.1%; F1-score = 0.87; F1-Score = 0.97 with oversampling), was optimized and deployed on the Raspberry Pi, Google Coral, and Nvidia Jetson edge devices using both TenorFlow Lite and TensorRT frameworks. Optimizing the models to run on edge devices reduced the average macro F1-Score to 0.7, and adversely affected the minority classes, reducing their F1-score to as low as 0.18. Upon stress testing, by processing 1000 images consecutively, Jetson Nano, running a TensorRT model, outperformed others with a latency of 0.276 s/image (s.d. = 0.002) while consuming an average current of 1665.21 mA. Raspberry Pi consumed the least average current (838.99 mA) with a ten times worse latency of 2.83 s/image (s.d. = 0.036). Nano was the only reasonable option as an edge device because it could capture most animals whose maximum speeds were below 80 km/h, including goats, lions, ostriches, etc. While the proposed architecture is viable, unbalanced data remain a challenge and the results can potentially be improved by using object detection to reduce imbalances and by exploring semi-supervised learning.},
+DOI = {10.3390/computers11010013}
+}
