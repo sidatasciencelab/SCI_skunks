@@ -8,7 +8,7 @@ date: "August 24, 2023"
 
 - **Machine Model:** [NVIDIA reComputerJ10]
 - **Label:** [Machine #1] 
-- test changes
+
 
 # Overview
 
