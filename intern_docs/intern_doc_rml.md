@@ -7,7 +7,7 @@ date: "August 24, 2023"
 ## System Specifications
 
 - **Machine Model:** [NVIDIA reComputerJ10]
-- **Label:** [Machine #01] 
+- **Label:** [Machine #1] 
 
 
 # Overview
