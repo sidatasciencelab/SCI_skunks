@@ -82,7 +82,7 @@ for (dirpath, dirnames, filenames) in os.walk("/media/pi/C060-4E55/DCIM1"):
     for filename in filenames:
         if filename.endswith('.jpg') or filename.endswith('.JPG'):  
           images = (os.sep.join([dirpath, filename]))
-          timeOfClass = datetime.datetime.now()
+          timeOfClass = datetime.datetime.now() 
 
           # Load an image to be classified.
           image = Image.open(images).convert('RGB')
