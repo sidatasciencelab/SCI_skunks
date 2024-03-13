@@ -1,7 +1,7 @@
 #sudo apt install exiftool
 
 
-echo "WARNING: double check varaibles before executing script"
+echo "WARNING: double check variables before executing script"
 echo"
 ​############################################################################################################################################################################################################################
 - This script renames every jpg file inside parent directory to include necessary metadata (camera name, zone, date, etc), and places them inside a single destination folder.
@@ -34,7 +34,7 @@ echo"
             ├── zone_trip_num_cam_num_img_2.jpg
             └── zone_trip_num_cam_num_img_3.jpg
  
-- The structure above shows the destination and source directories. All jpg files inside of the source directory's (Parent Direcotry) subdirectories (100RECNX) are copied into the destination folder with with the intended metadata and file name. 
+- The structure above shows the destination and source directories. All jpg files inside of the source directory's (Parent Directory) subdirectories (100RECNX) are copied into the destination folder with with the intended metadata and file name. 
 ​
 Shell script description (what the code means): 
 ​
@@ -66,25 +66,25 @@ To use this program on any MAC/MACBOOK you can do the following:
 
 echo"
 {For Raspberry Pi users}
-Upon running the shell script you will be promt with intructions and various input types.
-FOLLOW INSTRUCTIONS CLOSELY TO AVOID MSITAKES : )
+Upon running the shell script you will be prompted with instructions and various input types.
+FOLLOW INSTRUCTIONS CLOSELY TO AVOID MISTAKES : )
     1. Locate the parent directory and do "cd parent directory"
 	1) Go to your local storage/files where is the card is found. 
 	2) Right click on parent directory with image. 
         * Should be called DCIM. 
 	3) Click "Copy Path"
-    4) Enter the path you just copied in the line that promts "Parent direcoty: "
-	5) Next you will be asked "How many variables do you want to include in your file name: " you input should be numeric and only numeric.
+    4) Enter the path you just copied in the line that prompts "Parent directory: "
+	5) Next you will be asked "How many variables do you want to include in your file name: " your input should be numeric and only numeric.
     6) Next you will be asked to enter "Enter variable name". 
-        * Variable names should be input int he order that you want them to be attatched to file name. 
+        * Variable names should be input in the order that you want them to be attatched to file name. 
     7) Next you will be asked to enter "Enter variable value name". 
-        * For this part avoid spaces, any other inoput is acceptable.
-    8) We advice running in debugging mode at least once so that you can check for typos or mistakes in your typing or destination path 
+        * For this part avoid spaces, any other input is acceptable.
+    8) We advise running in debugging mode at least once so that you can check for typos or mistakes in your typing or destination path 
     
     
 ############################################################################################################################################################################################################################
 ​"
-read -p 'Parent direcoty: ' read_location; #location of parent directory for images sd card location
+read -p 'Parent directory: ' read_location; #location of parent directory for images sd card location
 read -p 'mass_rename.sh file directory: ' mass_rename_direct; #location of parent directory for images sd card location
 
 

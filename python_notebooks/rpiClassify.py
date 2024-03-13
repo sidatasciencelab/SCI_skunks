@@ -17,9 +17,7 @@ import datetime
 import glob, os
 from shutil import copyfile
 
-
-
-fileName = input("Please enter the name of the file procduced by mass_rename.sh, should look something like 'metaData_....csv'\n")
+fileName = input("Please enter the name of the file produced by mass_rename.sh, it should look something like 'metaData_....csv'\n")
 #fileName = "year_camLoc_camID_tripNum.csv"
 fileName = fileName.split("_",1)[1]
 
@@ -57,11 +55,22 @@ def classify_image(interpreter, image, top_k=1):
 
 #data_folder = parent_directory
 
-#model_path = data_folder+ "/" + model_name
-#label_path = data_folder + "/" + class_name
+# The following code will look within the folder titled "SCI_skunks" for the tflite_model folder and the model and label files
 
-model_path = "/home/pi/Downloads/SCI_skunks-main/tflite_model/model-4.tflite"
-label_path = "/home/pi/Downloads/SCI_skunks-main/tflite_model/class_labels.txt"
+home_directory = os.path.expanduser("~")
+
+# Search for SCI_skunks directory recursively
+sci_skunks_path = None
+for root, dirs, files in os.walk(home_directory):
+    if "SCI_skunks" in dirs:
+        sci_skunks_path = os.path.join(root, "SCI_skunks")
+        break
+
+if sci_skunks_path is None:
+    raise FileNotFoundError("SCI_skunks directory not found in the home directory. Confirm the folder name cloned from github is SCI_skunks. If not, change it to SCI_skunks in the file manager.")
+
+model_path = os.path.join(sci_skunks_path, "tflite_model/model-4.tflite")
+label_path = os.path.join(sci_skunks_path, "tflite_model/class_labels.txt")
 
 interpreter = Interpreter(model_path)
 #print("Model Loaded Successfully.")
@@ -77,8 +86,25 @@ dict = {'imageLabel':[],
         'classificationTimeStamp' : []}
 results = pd.DataFrame(dict)
 
+# Get the current username
+username = os.getlogin()
 
-for (dirpath, dirnames, filenames) in os.walk("/media/pi/C060-4E55/DCIM1"):
+# Use string concat to create the base_path  
+base_path = "/media/" + username + "/"
+
+sd_card_name = input("Please enter the name of the SD card (i.e. SDHC) : ")
+  
+sd_card_path = os.path.join(base_path, sd_card_name)
+
+# Check if DCIM directory exists within the SD card path
+dcim_path = os.path.join(sd_card_path, "DCIM")
+if os.path.exists(dcim_path) and os.path.isdir(dcim_path):
+    for (dirpath, dirnames, filenames) in os.walk(dcim_path):
+        pass
+else:
+    raise FileNotFoundError("DCIM directory not found in the specified SD card. Check to make sure the DCIM folder in the SD card is called DCIM, if not change it to DCIM in the file manager. ")  
+
+for (dirpath, dirnames, filenames) in os.walk(dcim_path):
     for filename in filenames:
         if filename.endswith('.jpg') or filename.endswith('.JPG'):  
           images = (os.sep.join([dirpath, filename]))
@@ -106,7 +132,7 @@ for (dirpath, dirnames, filenames) in os.walk("/media/pi/C060-4E55/DCIM1"):
 
           current_entry = {'imageLabel': classification_label, "imageName": filename, 'accuracy': (np.round(prob*100, 2), "%."), "classificationTimeStamp" : timeOfClass}
 
-          results = results.append(current_entry, ignore_index = True)
+          results = results._append(current_entry, ignore_index = True)
           
           print("classified image " + images)
               
