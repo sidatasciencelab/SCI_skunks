@@ -210,5 +210,3 @@ if acknowledge_observation.lower() != "yes":
 else: print("Thank you, you have created the observation file.")
 
 
-
-
