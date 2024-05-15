@@ -201,8 +201,9 @@ esac
 echo "Now we are creating csv and saving it to the sd card" 
 
 
-exiftool -csv */*."${file_extension}" > "metaData_${regex}.csv" 
+exiftool -csv */*."${file_extension}" > "metaData_${regex}_bin.csv" 
 #using same metadata to create csv name
+cat metaData_${regex}_bin.csv | tr -d '\0' > metaData_${regex}.csv
 
 
 
