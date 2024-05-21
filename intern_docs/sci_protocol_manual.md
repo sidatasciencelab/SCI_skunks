@@ -91,67 +91,56 @@ The completion of these steps ensures the efficient collection, processing, and 
 
 # Updated Camera Trap Data Collection Protocol <a name="protocol"></a>
 
-# Disclaimer
-This Protocol is still in the works, more steps are soon to be added.
+## 1. Approaching the Camera Trap
+1. **Take a Mugshot**:
+   - Write the Camera #: UCSBCameraID (e.g., "UCSB02") and the date on the SCI Spotted Skunk folder’s laminated mugshot paper using a dry erase marker.
+   - Approach the camera trap with the mugshot paper visible to it and within its range.
+   - If the camera light blinks, the batteries are still functioning and the camera will take the mugshot.
 
-## Camera Trap Data Collection Protocol
-(Note there are multiple different types of cameras, some will have slightly different prompts)
+## 2. Replacing Batteries and Collecting Metadata
+1. **Assign Roles**:
+   - **Data Recorder**: Tracks the metadata on the sheet.
+   - **Camera Trap Handler**: Reads metadata to the data recorder.
 
-### Approaching Camera Trap:
-- Take a mugshot.
-- With a dry erase marker, fill in Camera #: UCSBCameraID (e.g., “UCSB02”) and the date on the SCI Spotted Skunk folder’s laminated mugshot paper.
-- Approach the camera trap and ensure the mugshot is visible to it and in its range.
-- If the camera light blinks when you approach, the batteries have not died yet, and it will take the mugshot.
+2. **Camera Trap Handler Tasks**:
+   - **Check and Replace Batteries**:
+     - Open the camera and check the battery charge status.
+     - Replace batteries and store old ones in the used batteries Ziploc bag.
+     - Check the charge status of the new batteries.
+   - **Record Metadata**:
+     - Navigate to and read the following settings:
+       - **Battery Type**
+       - **Status/About**:
+         - Number of images on the card
+         - Time (adjust if incorrect)
+         - Date
+         - Version number
+         - Serial number
+       - **Change Setup**:
+         - **Motion**:
+           - Motion pic (on/off)
+           - Number of pics
+           - Time between pics
+           - Motion video (on/off)
+           - Quiet period
+           - Sensitivity
+         - Confirm it is set to Rapidfire
+         - Confirm it is set to 24 hours
+       - **User Label** (if needed):
+         - Read current user label
+         - Change user label to CAMERAPOINTYEAR-TRIP (e.g., "02B2023-1")
+         - Read new user label
 
-### Replacing Batteries and Collecting Metadata:
-- Assign data recorder and camera trap handler:
-  - Camera trap handler will read camera trap metadata to data recorder, and data recorder will track it on the metadata sheet.
-- Camera trap handler:
-  - Open camera and read battery charge status.
-  - Replace batteries and store old batteries in used batteries ziplock.
-  - Read new battery charge status.
-  - Navigate to Battery Type.
-  - Read battery type.
-  - Navigate to Status/About.
-  - Read # of images on card.
-  - Read time (Change if incorrect, Check Manual).
-  - Read date.
-  - Read version number.
-  - Read serial number.
-  - Navigate to Change Setup and Navigate to Motion.
-  - Read motion pic (on/off).
-  - Read number of pics.
-  - Read time between pics.
-  - Read motion video (on/off).
-  - Read quiet period.
-  - Read Sensitivity.
-  - Confirm it is Rapidfire.
-  - Confirm it is 24 hours.
-  - Navigate to Change Setup and USERLABEL (might not be necessary on the camera anymore because of the mass rename script).
-  - Read current user label.
-  - Change user label to CAMERAPOINTYEAR-TRIP (e.g., 02B2023-1).
-  - Read new user label.
-- Data Recorder:
-  - Fill out datasheet with information read by camera trap handler.
-  - While recording data, confirm prefilled metadata on the sheet matches what is being read.
-  - If it does not match, edit the sheet manually with new changes.
+3. **Data Recorder Tasks**:
+   - Fill out the datasheet with the information read by the camera trap handler.
+   - Confirm that prefilled metadata on the sheet matches the data being read.
+   - Edit the sheet manually if there are any discrepancies.
+   - Have someone else double-check the recorded data and fill out the “Data Sheet Reviewer” section.
 
-### Mugshot Procedure:
-- Take a mugshot upon arriving and leaving each camera trap site; additionally, perform the walk test before the final mugshot.
-- To do a mugshot, write down the team name (i.e., UCSB2023), the date, and the time on a sheet of paper and make sure it's visible to the camera.
-- If the camera light blinks when you approach, the batteries have not died yet, and it will take the mugshot.
-- After you have taken the mugshot, open the camera and check if the batteries are on.
-- If there was no light when you approached and there is NO text on the screen, the batteries are dead and need to be replaced at that moment.
-- After you’ve replaced the batteries, when the camera turns on, record the date and time and any other information displayed on the screen. If the time is incorrect, change it at the end.
-- Proceed to dictate the rest of the data to the data recorder role.
-- If there IS text on the screen, the batteries still have some juice, and you can proceed to dictate the data to the data recorder role.
-- Regardless of how much charge the batteries have, you will replace them once you’ve finished noting down the data.
-- Then see how many pictures the camera took: check status.
-- Record the settings the camera is on: change them to the correct settings if needed.
-- Check the battery status: make sure to set on the lithium battery.
-- Replace the batteries if they are not brand new.
-- Do a walk test to see the camera span if needed.
-- Arm the camera.
-- Do another mugshot.
+## 3. Departing from the Camera Trap
+1. **Final Steps**:
+   - If necessary, perform a walk test to check the camera range.
+   - Arm the camera.
+   - Take another mugshot by approaching the camera with the mugshot paper. The camera will blink if it detects you.
 
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
