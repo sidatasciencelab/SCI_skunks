@@ -4,7 +4,7 @@ author: "Richard Montes Lemus"
 date: "February 28, 2024"
 ---
 # Introduction
-The Island Spotted Skunk Monitoring Project is a collaborative project between the Smithsonian Data Science Lab and the UCSB Office of Education Partnerships. This manual outlines the steps Skunk Crew members should follow to ensure an efficient workflow, from the pre-trip preparations to final data submission.
+The Island Spotted Skunk Monitoring Project is a collaboration between the Smithsonian Data Science Lab and the UCSB Office of Education Partnerships. This manual outlines the steps Skunk Crew members should follow to ensure an efficient workflow, from the pre-trip preparations to final data submission.
 
 ## Pre-Trip Preparations
 ### Coordinators' Communication
@@ -44,7 +44,7 @@ The Island Spotted Skunk Monitoring Project is a collaborative project between t
 - Transportation of equipment, food, and secure data back to UCSB.
 ### Data Management
 - Store metadata sheets and data safely.
-- Compilation and organization of CSV files using tabular manipulation and binding, including mass rename script results, model outcomes, and field notes (from CSV file that will be created and manually filled in for metadata datasheet field notes and camera set notes).
+- Compilation and organization of CSV files using concatenated_sci_csv.py script. See [Camtrap DP CSV File Concatenation](#concatenate).
 ### Data Submission
 - Format CSV files to Camtrap DP standards.
 - Store CSV files and images on a hard drive.
@@ -144,3 +144,4 @@ The completion of these steps ensures the efficient collection, processing, and 
    - Take another mugshot by approaching the camera with the mugshot paper. The camera will blink if it detects you.
 
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
+# Camtrap DP CSV File Concatenation <a name="concatenate"></a>
