@@ -30,8 +30,7 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 ## Field Data Collection
 ### Camera Trap Setup
 - Prepare the skunk box and folder with necessary items for fieldwork tasks. See [Skunk Box and Folder Checklist](#checklist).
-- Follow detailed steps for collecting data at camera trap sites, replacing batteries, and documenting field notes and metadata on data sheets.
-- See [Updated Camera Trap Data Collection Protocol](#protocol). 
+- Follow detailed steps for collecting data at camera trap sites, replacing batteries, and documenting field notes and metadata on data sheets.See [Updated Camera Trap Data Collection Protocol](#protocol). 
 
 ## Data Processing
 - Process collected SD cards using the mass rename script and machine learning model script. See [Mass Rename and Model Instructions](#massandmodel). 
