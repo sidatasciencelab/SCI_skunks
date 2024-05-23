@@ -30,11 +30,12 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 ## Field Data Collection
 ### Camera Trap Setup
 - Prepare the skunk box and folder with necessary items for fieldwork tasks. See [Skunk Box and Folder Checklist](#checklist).
-- Follow detailed steps for collecting data at camera trap sites, replacing batteries, and documenting field notes and metadata on data sheets.See [Updated Camera Trap Data Collection Protocol](#protocol). 
+- Follow detailed steps for collecting data at camera trap sites, replacing batteries, and documenting field notes and metadata on data sheets. See [Updated Camera Trap Data Collection Protocol](#protocol). 
 
 ## Data Processing
-- Process collected SD cards using the mass rename script and machine learning model script. See [Mass Rename and Model Instructions](#massandmodel). 
-- Generate CSV files from both scripts and compile relevant field notes and metadata from the data sheets for each camera trap site - they will be used in Post-Trip Procedures: Data Management.
+- Ensure your Rasberry Pi is set up correctly, and all scripts run correctly. See [
+- Process collected SD cards using the mass rename script, the machine learning model script, and the deploy media observation script. See [Mass Rename and Model Instructions](#massandmodel). 
+- Generate CSV files from all three scripts and compile relevant field notes and metadata from the data sheets for each camera trap site - they will be used in Post-Trip Procedures: Data Management.
 ### Inventory Update
 - Update inventory lists based on field requirements before leaving the island.
 
@@ -45,15 +46,15 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 - Store metadata sheets and data safely.
 - Compilation and organization of CSV files using concatenated_sci_csv.py script. See [Camtrap DP CSV File Concatenation](#concatenate).
 ### Data Submission
-- Format CSV files to Camtrap DP standards.
-- Store CSV files and images on a hard drive.
-- Send data to the Smithsonian's Hydra computer using Globus from the hard drive.
-- Upload metadata sheets and standardized CSV files to GitHub.
-- Take a picture of metadata sheets and upload to GitHub or somewhere else safe.
-- Store metadata datasheets and hard drive somewhere safe.
+- Take concatenated scripts and camera trap images for every trip and store them on a hard drive
+- Take concatenated scripts and camera trap images for every trip on the hard drive and send them to the       
+  Smithsonian's Hydra computer using Globus.
+- Upload metadata sheets and deploy media observation CSV files to GitHub.
+- Take a picture of metadata sheets and upload it to GitHub.
+- Store metadata datasheets and hard drives somewhere safe.
 
 # Conclusion
-The completion of these steps ensures the efficient collection, processing, and submission of data for the Island Spotted Skunk Monitoring Project.
+Completing these steps ensures the efficient collection, processing, and submission of data for the Island Spotted Skunk Monitoring Project.
 
 
 # Skunk Box and Folder Checklist <a name="checklist"></a>
@@ -92,7 +93,7 @@ The completion of these steps ensures the efficient collection, processing, and 
 
 ## 1. Approaching the Camera Trap
 1. **Take a Mugshot**:
-   - Write the Camera #: UCSBCameraID (e.g., "UCSB02") and the date on the SCI Spotted Skunk folder’s laminated mugshot paper using a dry erase marker.
+   - Write the Camera #: UCSBCameraID (e.g., "UCSB02") and the date on the SCI Spotted Skunk folder’s laminated mugshot paper using a dry-erase marker.
    - Approach the camera trap with the mugshot paper visible to it and within its range.
    - If the camera light blinks, the batteries are still functioning and the camera will take the mugshot.
 
@@ -126,7 +127,7 @@ The completion of these steps ensures the efficient collection, processing, and 
          - Confirm it is set to Rapidfire
          - Confirm it is set to 24 hours
        - **User Label** (if needed):
-         - Read current user label
+         - Read the current user label
          - Change user label to CAMERAPOINTYEAR-TRIP (e.g., "02B2023-1")
          - Read new user label
 
