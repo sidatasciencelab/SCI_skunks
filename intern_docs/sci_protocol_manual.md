@@ -33,7 +33,7 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 - Follow detailed steps for collecting data at camera trap sites, replacing batteries, and documenting field notes and metadata on data sheets. See [Updated Camera Trap Data Collection Protocol](#protocol). 
 
 ## Data Processing
-- Ensure your Rasberry Pi is set up correctly, and all scripts run correctly. See [
+- Ensure your Rasberry Pi is set up correctly, and all scripts run correctly. See [Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment](#rpi_github).
 - Process collected SD cards using the mass rename script, the machine learning model script, and the deploy media observation script. See [Mass Rename and Model Instructions](#massandmodel). 
 - Generate CSV files from all three scripts and compile relevant field notes and metadata from the data sheets for each camera trap site - they will be used in Post-Trip Procedures: Data Management.
 ### Inventory Update
@@ -143,5 +143,6 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Arm the camera.
    - Take another mugshot by approaching the camera with the mugshot paper. The camera will blink if it detects you.
 
+# Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment <a name="rpi_github"></a>
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
