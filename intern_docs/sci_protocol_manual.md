@@ -1,7 +1,7 @@
 ---
 title: "SCI Protocol Skunk Crew Manual"
 author: "Richard Montes Lemus"
-date: "February 28, 2024"
+date: "May 28, 2024"
 ---
 # Introduction
 The Island Spotted Skunk Monitoring Project is a collaboration between the Smithsonian Data Science Lab and the UCSB Office of Education Partnerships. This manual outlines the steps Skunk Crew members should follow to ensure an efficient workflow, from the pre-trip preparations to final data submission.
