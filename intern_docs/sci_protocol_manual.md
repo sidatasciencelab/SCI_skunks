@@ -143,7 +143,30 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Arm the camera.
    - Take another mugshot by approaching the camera with the mugshot paper. The camera will blink if it detects you.
 
-# Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment <a name="rpi_github"></a>
+# Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment <a name="rpi_github"></a>  
+## Reinstalling the Raspberry Pi Software
+1. **Download and Install Raspberry Pi Imager**:
+   - [Download Raspberry Pi Imager Software](https://www.raspberrypi.com/software/)
+2. **Prepare the SD Card**:
+   - Remove the SD card from the Raspberry Pi and insert it into your computer.
+3. **Open Raspberry Pi Imager**:
+   - Launch the Raspberry Pi Imager on your computer.
+4. **Reset and Install Software**:
+   - Follow the on-screen instructions in the Raspberry Pi Imager to reset the software and install the latest version.
+
+## Downloading the SCI_skunks Folder from GitHub and Changing Permissions
+
+### Cloning the Repository
+1. **Change to the Downloads Directory**:
+   ```bash
+   cd ~/Downloads
+   ```
+2. **Clone the SCI_skunks Repository**:
+   ```bash
+   git clone https://github.com/sidatasciencelab/SCI_skunks.git
+   ```
+   
+
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
 ## 1. Insert SD CarD
 1. **Insert SD Card**:
