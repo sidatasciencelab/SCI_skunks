@@ -213,11 +213,11 @@ Completing these steps ensures the efficient collection, processing, and submiss
    ```bash
    conda activate skunkEnv
    ```
-6.**Install Dependencies from spec-file.txt**:  
+6. **Install Dependencies from spec-file.txt**:  
    ```bash
    conda install --name skunkEnv --file spec-file.txt
    ```
-  - If you encounter issues with the above steps, you can create the environment directly using:
+    - If you encounter issues with the above steps, you can create the environment directly using:
    ```bash
    conda create --name skunkEnv --file spec-file.txt
    ```
