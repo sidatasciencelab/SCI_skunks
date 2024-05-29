@@ -209,7 +209,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 
 ## 8. Run rpiClassify.py Script
 1. **Execute Script**:
-   - In the terminal, enter the command:
+- In the terminal, enter the command:
      ```bash
      python3.9 /home/zachary/Downloads/SCI_skunks-main/python_notebooks/rpiClassify.py
      ```
