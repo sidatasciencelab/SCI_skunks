@@ -171,6 +171,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
    cd ~/Downloads/SCI_skunks
    ```
 2. **Make Scripts Executable**:
+   - For rpiClassify.py
    ```bash
    chmod u+x python_notebooks/rpiClassify.py
    ```
