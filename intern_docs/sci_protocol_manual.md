@@ -304,5 +304,129 @@ Completing these steps ensures the efficient collection, processing, and submiss
 - Enter the name of the SD card exactly as it appears in the file manager.
 3. **Check Results**:
 - Once finished, open the SD card folder and note a new CSV file titled `model_results.csv`.
+- 
+# CAMTRAP DP Formatting Instructions <a name="deploymediaobs"></a>
+
+## 1. Activate skunkEnv Environment
+1. **Activate Environment**:
+   - In the terminal, enter the command:
+     ```bash
+     conda activate skunkEnv
+     ```
+
+## 2. Run deployMediaObs.py Script
+1. **Execute Script**:
+   - In the terminal, enter the command:
+     ```bash
+     python3.9 /home/zachary/Downloads/SCI_skunks-main/python_notebooks/deployMediaObs.py
+     ```
+
+## 3. Input Path to EXIF Data CSV File
+1. **Provide Path**:
+   - When prompted, input the path to the CSV file which contains EXIF data:
+     ```bash
+     /media/zachary/SDCARD/DCIM/metaData_2023_05_5A_1.csv
+     ```
+   - **Note**: The highlighted “2023_05_5A_1” part is unique for every CSV file. Ensure you input your correct CSV file name. Right-click to copy the path.
+2. **Confirm Path**:
+   - Answer the question in the terminal:
+     ```bash
+     Does this look correct? (yes/no) /media/zachary/SDCARD/DCIM/metaData_2023_05_5A_1.csv
+     ```
+   - Type `yes`.
+
+## 4. Input Path to Model Classification Data CSV File
+1. **Provide Path**:
+   - When prompted, input the path to the CSV file which contains model classification data:
+     ```bash
+     /media/zachary/SDCARD/DCIM/modelResults_2023_05_5A_1.csv
+     ```
+   - **Note**: The highlighted “2023_05_5A_1” part is unique for every CSV file. Ensure you input your correct CSV file name.
+2. **Confirm Path**:
+   - Answer the question in the terminal:
+     ```bash
+     Does this look correct? (yes/no) /media/zachary/SDCARD/DCIM/modelResults_2023_05_5A_1.csv
+     ```
+   - Type `yes`.
+
+## 5. Acknowledge Deployment File Notification
+1. **Acknowledge Message**:
+   - The terminal will notify you that the deployment file is not created through code, but is manually filled in:
+     ```bash
+     The deployment file should be a CSV file that is manually updated, accessible via Trello or GitHub.
+     Please acknowledge by typing 'yes' to continue:
+     ```
+   - Type `yes`.
+
+## 6. Input Comments for Media File
+1. **Provide Comments**:
+   - Answer the question in the terminal:
+     ```bash
+     Any comments you would like to leave in this media file? (yes/no):
+     ```
+   - Type `yes`.
+   - When prompted, input your comment:
+     ```bash
+     comments
+     ```
+2. **Confirm Comments**:
+   - Answer the question in the terminal:
+     ```bash
+     Does this look correct (yes/no)? comments
+     ```
+   - Type `yes`.
+
+## 7. Input Location ID for Media File
+1. **Provide Location ID**:
+   - Answer the question in the terminal, capitalizing the letter in the location ID for consistency:
+     ```bash
+     Give the location ID for this media file (i.e., 5A):
+     ```
+   - Type `5A`.
+2. **Confirm Location ID**:
+   - Answer the question in the terminal:
+     ```bash
+     Does this look correct (yes/no) 5A
+     ```
+   - Type `yes`.
+
+## 8. Acknowledge Media File Creation
+1. **Acknowledge Message**:
+   - Note that the media file has been created and saved as `media_metaData_2023_05_5A_1.csv` in the current working directory:
+     ```bash
+     Please acknowledge by typing 'yes' to continue:
+     ```
+   - Type `yes`.
+
+## 9. Input Comments for Observation File
+1. **Provide Comments**:
+   - When prompted, type any comments you would like to leave in this observation file:
+     ```bash
+     Any comments you would like to leave in this observation file? (yes/no):
+     ```
+   - Type `yes`.
+   - When prompted, input your comment:
+     ```bash
+     comments
+     ```
+2. **Confirm Comments**:
+   - Answer the question in the terminal:
+     ```bash
+     Does this look correct (yes/no)? comments
+     ```
+   - Type `yes`.
+
+## 10. Acknowledge Observation File Creation
+1. **Acknowledge Message**:
+   - Note that the observation file has been created and saved as `observation_metaData_2023_05_5A_1.csv` in the current working directory:
+     ```bash
+     Please acknowledge by typing 'yes' to continue:
+     ```
+   - Type `yes`.
+
+## 11. Eject the SD Card
+1. **Eject SD Card**:
+   - Eject the SD card via the arrow to the right of its name in the file explorer.
+   - Remove the SD card from the Raspberry Pi.
 
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
