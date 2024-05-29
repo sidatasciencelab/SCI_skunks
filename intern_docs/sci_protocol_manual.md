@@ -167,22 +167,22 @@ Completing these steps ensures the efficient collection, processing, and submiss
    ```
 ### Changing Permissions
 1. **Change to the SCI_skunks Directory**:
-```bash
-cd ~/Downloads/SCI_skunks
-```
+   ```bash
+   cd ~/Downloads/SCI_skunks
+   ```
 2. **Make Scripts Executable**:
-- For rpiClassify.py:
-```bash
-chmod u+x python_notebooks/rpiClassify.py
-```
-- For deployMediaObs.py:
-```bash
-chmod u+x python_notebooks/deployMediaObs.py
-```
-- For mass_rename.sh:
-```bash
-chmod u+x Shell_scripts/mass_rename.sh
-```
+  - For rpiClassify.py:
+  ```bash
+  chmod u+x python_notebooks/rpiClassify.py
+  ```
+  - For deployMediaObs.py:
+  ```bash
+  chmod u+x python_notebooks/deployMediaObs.py
+  ```
+  - For mass_rename.sh:
+  ```bash
+  chmod u+x Shell_scripts/mass_rename.sh
+  ```
 
 ## Downloading Miniforge and Creating the skunkEnv Environment
 Installing Miniforge
