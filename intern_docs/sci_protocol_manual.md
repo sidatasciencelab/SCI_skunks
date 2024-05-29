@@ -171,10 +171,9 @@ Completing these steps ensures the efficient collection, processing, and submiss
    cd ~/Downloads/SCI_skunks
    ```
 2. **Make Scripts Executable**:
-  - For rpiClassify.py:
-  ```bash
-  chmod u+x python_notebooks/rpiClassify.py
-  ```
+   ```bash
+   chmod u+x python_notebooks/rpiClassify.py
+   ```
   - For deployMediaObs.py:
   ```bash
   chmod u+x python_notebooks/deployMediaObs.py
@@ -239,7 +238,7 @@ Copy code
 conda list --explicit > spec-file.txt
 
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
-## 1. Insert SD CarD
+## 1. Insert SD Card
 1. **Insert SD Card**:
 - Insert the SD card into the adapter in the back of the Raspberry Pi.
 
