@@ -160,7 +160,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 
 ## 3. Rename the SD Card
 1. **Rename SD Card**:
-   - Rename the SD card to be without spaces (e.g., `SDCARD`).
+   - Rename the SD card to a name in snake_case (e.g., `sd_card`).
    - To rename it, right-click the folder with its name and select rename.
 
 ## 4. Open Terminal and Set Working Directory
@@ -218,5 +218,5 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Enter the name of the SD card exactly as it appears in the file manager.
 3. **Check Results**:
    - Once finished, open the SD card folder and note a new CSV file titled `model_results.csv`.
-   
+
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
