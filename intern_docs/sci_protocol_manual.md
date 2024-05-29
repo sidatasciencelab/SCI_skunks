@@ -165,7 +165,78 @@ Completing these steps ensures the efficient collection, processing, and submiss
    ```bash
    git clone https://github.com/sidatasciencelab/SCI_skunks.git
    ```
-   
+### Changing Permissions
+1. **Change to the SCI_skunks Directory**:
+```bash
+cd ~/Downloads/SCI_skunks
+```
+2. **Make Scripts Executable**:
+- For rpiClassify.py:
+```bash
+chmod u+x python_notebooks/rpiClassify.py
+```
+- For deployMediaObs.py:
+```bash
+chmod u+x python_notebooks/deployMediaObs.py
+```
+- For mass_rename.sh:
+```bash
+chmod u+x Shell_scripts/mass_rename.sh
+```
+
+## Downloading Miniforge and Creating the skunkEnv Environment
+Installing Miniforge
+Download Miniforge Installer:
+bash
+Copy code
+wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-aarch64.sh
+Run the Miniforge Installer:
+bash
+Copy code
+bash Miniforge3-Linux-aarch64.sh
+Follow the Installation Instructions:
+If prompted, update Miniforge and follow the on-screen instructions.
+Setting Up skunkEnv Environment
+Download spec-file.txt:
+
+Ensure spec-file.txt is placed in the Downloads folder on your Raspberry Pi.
+Open a New Terminal:
+
+Change to the Downloads Directory:
+
+bash
+Copy code
+cd ~/Downloads
+Create the skunkEnv Environment:
+
+bash
+Copy code
+conda create --name skunkEnv
+Activate the skunkEnv Environment:
+
+bash
+Copy code
+conda activate skunkEnv
+Install Dependencies from spec-file.txt:
+
+bash
+Copy code
+conda install --name skunkEnv --file spec-file.txt
+If you encounter issues with the above steps, you can create the environment directly using:
+bash
+Copy code
+conda create --name skunkEnv --file spec-file.txt
+Activating skunkEnv Environment
+Activate the Environment:
+bash
+Copy code
+conda activate skunkEnv
+Saving the Spec File for Future Use
+Generate the Spec File:
+To get the spec file from any Raspberry Pi in the future, run:
+bash
+Copy code
+conda list --explicit > spec-file.txt
 
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
 ## 1. Insert SD CarD
