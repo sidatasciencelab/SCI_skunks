@@ -222,17 +222,17 @@ Completing these steps ensures the efficient collection, processing, and submiss
    conda create --name skunkEnv --file spec-file.txt
    ```
 ## Activating skunkEnv Environment
-Activate the Environment:
-bash
-Copy code
-conda activate skunkEnv
-Saving the Spec File for Future Use
-Generate the Spec File:
-To get the spec file from any Raspberry Pi in the future, run:
-bash
-Copy code
-conda list --explicit > spec-file.txt
-
+1. **Activate the Environment**:  
+   ```bash
+   conda activate skunkEnv
+   ```
+## Saving the Spec File for Future Use
+1. **Generate the Spec File**:
+   - To get the spec file from any Raspberry Pi in the future, run: 
+   ```bash
+   conda list --explicit > spec-file.txt
+   ```
+   
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
 ## 1. Insert SD Card
 1. **Insert SD Card**:
