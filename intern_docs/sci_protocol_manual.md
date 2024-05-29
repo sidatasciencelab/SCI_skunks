@@ -148,7 +148,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 1. **Download and Install Raspberry Pi Imager**:
    - [Download Raspberry Pi Imager Software](https://www.raspberrypi.com/software/)
 2. **Prepare the SD Card**:
-   - Remove the SD card from the Raspberry Pi and insert it into your computer.
+   - Obtain the SD card from the Raspberry Pi and insert it into your computer.
 3. **Open Raspberry Pi Imager**:
    - Launch the Raspberry Pi Imager on your computer.
 4. **Reset and Install Software**:
