@@ -145,7 +145,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 
 # Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment <a name="rpi_github"></a>
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
-```markdown
+
 # Running Scripts on SD Cards <a name="scripts"></a>
 
 ## 1. Insert SD Card
@@ -218,5 +218,5 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Enter the name of the SD card exactly as it appears in the file manager.
 3. **Check Results**:
    - Once finished, open the SD card folder and note a new CSV file titled `model_results.csv`.
-```
+   
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
