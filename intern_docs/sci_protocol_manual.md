@@ -145,64 +145,61 @@ Completing these steps ensures the efficient collection, processing, and submiss
 
 # Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment <a name="rpi_github"></a>
 # Mass Rename and Model Instructions <a name="massandmodel"></a>
-
-# Running Scripts on SD Cards <a name="scripts"></a>
-
-## 1. Insert SD Card
+## 1. Insert SD CarD
 1. **Insert SD Card**:
-   - Insert the SD card into the adapter in the back of the Raspberry Pi.
+- Insert the SD card into the adapter in the back of the Raspberry Pi.
 
 ## 2. Open File Explorer
 1. **Access SD Card**:
-   - Click on the “File Explorer” folder icon at the top left of the screen.
-   - Once the window is open, click the name of the SD card (e.g., `SDCARD`) at the top left of the window.
-   - Confirm that your images on the SD card appear.
+- Click on the “File Explorer” folder icon at the top left of the screen.
+- Once the window is open, click the name of the SD card (e.g., `SDCARD`) at the top left of the window.
+- Confirm that your images on the SD card appear.
 
 ## 3. Rename the SD Card
 1. **Rename SD Card**:
-   - Rename the SD card to a name in snake_case (e.g., `sd_card`).
-   - To rename it, right-click the folder with its name and select rename.
+- Rename the SD card to a name without spaces (e.g., `SDCARD`).
+- To rename it, right-click the folder with its name and select rename.
 
 ## 4. Open Terminal and Set Working Directory
 1. **Open Terminal**:
-   - Open a terminal window with `ctrl + alt + t`.
+- Open a terminal window with `ctrl + alt + t`.
 2. **Set Directory**:
-   - Set your working directory to your SD card folder by entering the command:
+- Set your working directory to your SD card folder by entering the command:
      ```bash
      cd /media/zachary/SDCARD/DCIM
      ```
 
 ## 5. Run the mass_rename.sh Script
 1. **Execute Script**:
-   - Enter the following command in the terminal:
+- Enter the following command in the terminal:
      ```bash
      /home/zachary/Downloads/SCI_skunks/Shell_scripts/mass_rename.sh
      ```
 2. **Provide Inputs**:
-   - When prompted for the parent directory, enter:
+- When prompted for the parent directory, enter:
      ```bash
      /media/zachary/SDCARD/DCIM
      ```
-   - When prompted for the `mass_rename.sh` file directory, enter:
+- When prompted for the `mass_rename.sh` file directory, enter:
      ```bash
      /home/zachary/Downloads/SCI_skunks/Shell_scripts
      ```
-   - When prompted for the file extension, enter the file extension provided by your camera (default is `JPG`).
-   - Choose `4` as the number of included variables.
-   - Name the variables in this order: `year`, `trip number`, `camera location`, `location ID`. Enter the corresponding values in the next prompt, capitalizing the letter in location ID for consistency and including zeros for single digits (e.g., `year = 2023`, `trip number = 01`, `camera location = 05`, `location ID = 5A`).
-   - Enter `y` when asked to run the function in debug mode.
-   - Confirm that debug mode gives the correct output.
-   - Enter `y` to run with previous entries.
+- When prompted for the file extension, enter the file extension provided by your camera (default is `JPG`).
+- Choose `4` as the number of included variables.
+- Name the variables in this order: `year`, `trip number`, `camera location`, `location ID`. Enter the corresponding values in the next prompt, capitalizing the letter in location ID for consistency and including zeros for single digits (e.g., `year = 2023`, `trip number = 01`, `camera location = 05`, `location ID = 5A`).
+- Enter `y` when asked to run the function in debug mode.
+- Confirm that debug mode gives the correct output.
+- Enter `y` to run with previous entries.
 
 ## 6. Verify File Names and Metadata
 1. **Check Files**:
-   - Go back to the SD card folder via the instructions in step 2.
-   - Note that the file names for all images have been changed according to the variable values entered.
-   - Note that there is a CSV file created called `metaData.csv`.
+- Go back to the SD card folder via the instructions in step 2.
+- Note that the file names for all images have been changed according to the variable values entered.
+- Note that there is a CSV file created called `metaData.csv`.
 
 ## 7. Activate skunkEnv Environment
 1. **Activate Environment**:
-   - In the terminal, enter the command:
+- In the terminal, enter the command:
      ```bash
      conda activate skunkEnv
      ```
@@ -214,9 +211,9 @@ Completing these steps ensures the efficient collection, processing, and submiss
      python3.9 /home/zachary/Downloads/SCI_skunks-main/python_notebooks/rpiClassify.py
      ```
 2. **Provide Inputs**:
-   - Enter the name of the CSV file created by `mass_rename.sh` when prompted. The machine learning model will now begin classification.
-   - Enter the name of the SD card exactly as it appears in the file manager.
+- Enter the name of the CSV file created by `mass_rename.sh` when prompted. The machine learning model will now begin classification.
+- Enter the name of the SD card exactly as it appears in the file manager.
 3. **Check Results**:
-   - Once finished, open the SD card folder and note a new CSV file titled `model_results.csv`.
+- Once finished, open the SD card folder and note a new CSV file titled `model_results.csv`.
 
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
