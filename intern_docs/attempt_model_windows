@@ -1,0 +1,39 @@
+PS C:\Users\richa\projects> conda activate skunkEnv
+PS C:\Users\richa\projects> conda install --name skunkEnv --file spec-file.txt
+
+Downloading and Extracting Packages:
+ca-certificates-2022 | #####                                     |  12%
+ld_impl_linux-aarch6 | ##################################1       |  83%
+libgfortran5-11.2.0  | #####################7                    |  53%
+libgomp-12.2.0       | #4                                        |   4%
+libstdcxx-ng-12.2.0  | ###############################6          |  77%
+_openmp_mutex-4.5    | ############################3             |  69%
+libgfortran-ng-11.2. | ######################################### | 100%
+libgcc-ng-12.2.0     | #2                                        |   3%
+libffi-3.4.2         | ###########2                              |  28%
+libnsl-2.0.0         | ####################8                     |  51%
+libopenblas-0.3.20   | ##############################3           |  74%
+
+
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\ca-certificates-2022.07.19-hd43f75c_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\_openmp_mutex-4.5-2_gnu.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libffi-3.4.2-h3557bc0_5.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libgomp-12.2.0-h607ecd0_19.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libnsl-2.0.0-hf897c2e_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libzlib-1.2.13-h4e544f5_4.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libgcc-ng-12.2.0-h607ecd0_19.tar.bz2.  You probably need to 
+delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libgfortran5-11.2.0-h1234567_1.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\ncurses-6.3-headf329_1.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libblas-3.9.0-15_linuxaarch64_openblas.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\ld_impl_linux-aarch64-2.39-ha75b1e8_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\xz-5.2.6-h9cdd2b7_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libstdcxx-ng-12.2.0-hc13a102_19.tar.bz2.  You probably need 
+to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\readline-8.1.2-h38e3740_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\libcblas-3.9.0-15_linuxaarch64_openblas.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')        
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\liblapack-3.9.0-15_linuxaarch64_openblas.tar.bz2.  You probas\\libopenblas-0.3.20-hc2e42e2_1.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\tk-8.6.12-hd8af866_0.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+InvalidArchiveError('Error with archive C:\\Users\\richa\\miniforge3\\pkgs\\python-3.6.15-h30375ac_0_cpython.tar.bz2.  You probably need to delete and re-download or re-create this file.  Message was:\n\nfailed with error: seeking backwards is not allowed')
+
+PS C:\Users\richa\projects>
