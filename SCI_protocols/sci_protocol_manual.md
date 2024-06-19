@@ -437,7 +437,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Place all files for one trip on a single hard drive and create a folder to contain (i.e. sci_skunk_2023_trip_02)
    - Open and run the concatenated_sci_csv.py file.
    - concatenated_sci_csv.py is in the python_notebooks folder but can be placed anywhere on your local machine. 
-## 2. Input Path to Camtrap DP CSV Files
+## 2. Run concatenating script
 1. **Provide Path**:
    - When prompted, input the path to the CSV files on the hard drive which contain data:
      ```bash
