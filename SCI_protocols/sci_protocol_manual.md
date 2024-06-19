@@ -46,10 +46,13 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 - Store metadata sheets and data safely.
 - Compilation and organization of CSV files using concatenated_sci_csv.py script. See [Camtrap DP CSV File Concatenation](#concatenate).
 ### Data Submission
-- Take concatenated scripts and camera trap images for every trip and store them on a hard drive
+- Ensure concatenated scripts and camera trap images for the trip are stored on a hard drive
 - Take concatenated scripts and camera trap images for every trip on the hard drive and send them to the       
   Smithsonian's Hydra computer using Globus.
+  - The Source may vary (i.e. RML_laptop) and the Destination will be UCSB-SI scholars island spotted skunk data
 - Upload metadata sheets and deploy media observation CSV files to GitHub.
+- Deployment CSV sheet must be updated  anytime a new camera is switched out on the field.
+  - this camera switching is considered a new deployment and must be a new row. 
 - Take a picture of metadata sheets and upload it to GitHub.
 - Store metadata datasheets and hard drives somewhere safe.
 
@@ -430,3 +433,20 @@ Completing these steps ensures the efficient collection, processing, and submiss
    - Remove the SD card from the Raspberry Pi.
 
 # Camtrap DP CSV File Concatenation <a name="concatenate"></a>
+## 1. Move SD card CSV Files and images to a single hard drive.  
+   - Place all files for one trip on a single hard drive and create a folder to contain (i.e. sci_skunk_2023_trip_02)
+   - Open and run the concatenated_sci_csv.py file.
+   - concatenated_sci_csv.py is in the python_notebooks folder but can be placed anywhere on your local machine. 
+## 2. Input Path to Camtrap DP CSV Files
+1. **Provide Path**:
+   - When prompted, input the path to the CSV files on the hard drive which contain data:
+     ```bash
+     /media/zachary/hard_drive/sci_skunk_2023_trip_02
+     ```
+2. **Select CSV files**
+   - When prompted, input the number corresponding to the CSV files you want to combine
+  
+3. **Provide Inputs**
+   - When prompted, input the trip number and year
+4. **Acknowledge Message**:
+   - Note that the combined CSV file has been created and saved in the working directory. 
