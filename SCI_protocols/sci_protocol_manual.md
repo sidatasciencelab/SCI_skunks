@@ -49,10 +49,10 @@ The Island Spotted Skunk Monitoring Project is a collaboration between the Smith
 - Ensure concatenated scripts and camera trap images for the trip are stored on a hard drive
 - Take concatenated scripts and camera trap images for every trip on the hard drive and send them to the       
   Smithsonian's Hydra computer using Globus.
-  - The Source may vary (i.e. RML_laptop) and the Destination will be UCSB-SI scholars island spotted skunk data
+  - The Source may vary (i.e. RML_laptop) and the Destination will be UCSB-SI scholars island spotted skunk data.
 - Upload metadata sheets and deploy media observation CSV files to GitHub.
 - Deployment CSV sheet must be updated  anytime a new camera is switched out on the field.
-  - this camera switching is considered a new deployment and must be a new row. 
+  - This camera switching is considered a new deployment and must be a new row. 
 - Take a picture of metadata sheets and upload it to GitHub.
 - Store metadata datasheets and hard drives somewhere safe.
 
