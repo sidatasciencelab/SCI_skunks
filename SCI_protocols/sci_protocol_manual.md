@@ -4,12 +4,12 @@ author: "Richard Montes Lemus"
 date: "May 28, 2024"
 ---
 # Table of Contents
-- [Skunk Box and Folder Checklist](#skunk-box-and-folder-checklist)
-- [Updated Camera Trap Data Collection Protocol](#updated-camera-trap-data-collection-protocol)
-- [Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment](#re-installing-raspberry-pi-software-and-setting-up-the-sci_skunks-environment)
-- [Mass Rename and Model Instructions](#mass-rename-and-model-instructions)
-- [CAMTRAP DP Formatting Instructions](#camtrap-dp-formatting-instructions)
-- [Camtrap DP CSV File Concatenation](#camtrap-dp-csv-file-concatenation)
+- [Skunk Box and Folder Checklist](#checklist)
+- [Updated Camera Trap Data Collection Protocol](#protocol)
+- [Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment](#rpi_github)
+- [Mass Rename and Model Instructions](#massandmodel)
+- [CAMTRAP DP Formatting Instructions](#deploymediaobs)
+- [Camtrap DP CSV File Concatenation](#concatenate)
 
 
 # Introduction
