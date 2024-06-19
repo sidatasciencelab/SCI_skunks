@@ -3,6 +3,15 @@ title: "SCI Protocol Skunk Crew Manual"
 author: "Richard Montes Lemus"
 date: "May 28, 2024"
 ---
+# Table of Contents
+- [Skunk Box and Folder Checklist](#skunk-box-and-folder-checklist)
+- [Updated Camera Trap Data Collection Protocol](#updated-camera-trap-data-collection-protocol)
+- [Re-Installing Raspberry Pi Software and Setting Up the SCI_skunks Environment](#re-installing-raspberry-pi-software-and-setting-up-the-sci_skunks-environment)
+- [Mass Rename and Model Instructions](#mass-rename-and-model-instructions)
+- [CAMTRAP DP Formatting Instructions](#camtrap-dp-formatting-instructions)
+- [Camtrap DP CSV File Concatenation](#camtrap-dp-csv-file-concatenation)
+
+
 # Introduction
 The Island Spotted Skunk Monitoring Project is a collaboration between the Smithsonian Data Science Lab and the UCSB Office of Education Partnerships. This manual outlines the steps Skunk Crew members should follow to ensure an efficient workflow, from the pre-trip preparations to final data submission.
 
