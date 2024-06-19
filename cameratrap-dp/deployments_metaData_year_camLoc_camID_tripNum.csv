@@ -1,2 +1,0 @@
-deploymentID,locationID,locationName,longitude,latitude,start,end,cameraID,cameraModel,cameraInterval,baitused,_id
-CAMID_CAMLOC,CAMID,CAMLOC,1.12345,1.12345,2021:04:04 13:47:23,2021:04:04 13:48:16,CAMID,HYPERFIRE 2 COVERT,0,None,NaN
