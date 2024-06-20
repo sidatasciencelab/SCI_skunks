@@ -310,7 +310,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 1. **Execute Script**:
 - In the terminal, enter the command:
      ```bash
-     python3.9 /home/zachary/Downloads/SCI_skunks-main/python_notebooks/rpiClassify.py
+     python3.9 /home/zachary/Downloads/SCI_skunks/python_notebooks/rpiClassify.py
      ```
 2. **Provide Inputs**:
 - Enter the name of the CSV file created by `mass_rename.sh` when prompted. The machine learning model will now begin classification.
@@ -331,7 +331,7 @@ Completing these steps ensures the efficient collection, processing, and submiss
 1. **Execute Script**:
    - In the terminal, enter the command:
      ```bash
-     python3.9 /home/zachary/Downloads/SCI_skunks-main/python_notebooks/deployMediaObs.py
+     python3.9 /home/zachary/Downloads/SCI_skunks/python_notebooks/deployMediaObs.py
      ```
 
 ## 3. Input Path to EXIF Data CSV File
