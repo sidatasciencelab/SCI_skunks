@@ -1,0 +1,36 @@
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: linux-aarch64
+@EXPLICIT
+https://conda.anaconda.org/anaconda/linux-aarch64/ca-certificates-2022.07.19-hd43f75c_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/ld_impl_linux-aarch64-2.39-ha75b1e8_0.tar.bz2
+https://conda.anaconda.org/anaconda/linux-aarch64/libgfortran5-11.2.0-h1234567_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libgomp-12.2.0-h607ecd0_19.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libstdcxx-ng-12.2.0-hc13a102_19.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/_openmp_mutex-4.5-2_gnu.tar.bz2
+https://conda.anaconda.org/anaconda/linux-aarch64/libgfortran-ng-11.2.0-h6e398d7_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libgcc-ng-12.2.0-h607ecd0_19.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libffi-3.4.2-h3557bc0_5.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libnsl-2.0.0-hf897c2e_0.tar.bz2
+https://conda.anaconda.org/anaconda/linux-aarch64/libopenblas-0.3.20-hc2e42e2_1.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libzlib-1.2.13-h4e544f5_4.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/ncurses-6.3-headf329_1.tar.bz2
+https://conda.anaconda.org/anaconda/linux-aarch64/openssl-1.1.1q-h2f4d8fa_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/xz-5.2.6-h9cdd2b7_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libblas-3.9.0-15_linuxaarch64_openblas.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libsqlite-3.40.0-hf9034f9_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/readline-8.1.2-h38e3740_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/tk-8.6.12-hd8af866_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/libcblas-3.9.0-15_linuxaarch64_openblas.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/liblapack-3.9.0-15_linuxaarch64_openblas.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/sqlite-3.40.0-h69ca7e5_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/python-3.6.15-h30375ac_0_cpython.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/python_abi-3.6-2_cp36m.tar.bz2
+https://conda.anaconda.org/anaconda/noarch/pytz-2021.3-pyhd3eb1b0_0.tar.bz2
+https://conda.anaconda.org/anaconda/noarch/six-1.16.0-pyhd3eb1b0_1.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/wheel-0.37.1-pyhd8ed1ab_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/numpy-1.19.5-py36hdc1b780_1.tar.bz2
+https://conda.anaconda.org/anaconda/noarch/python-dateutil-2.8.2-pyhd3eb1b0_0.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/setuptools-58.0.4-py36h704843e_2.tar.bz2
+https://conda.anaconda.org/conda-forge/linux-aarch64/pandas-1.1.5-py36ha63b481_0.tar.bz2
+https://conda.anaconda.org/conda-forge/noarch/pip-21.3.1-pyhd8ed1ab_0.tar.bz2
